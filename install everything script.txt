@@ -1,9 +1,3 @@
-#elevate powershell
-#Start-Process powershell -Verb runAs
-
-#bypass execution policy for this process and install choco
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-
 #important dev stuff
 choco install googlechrome visualstudio2017professional visualstudio2017-workload-netweb visualstudio2017-workload-azure netfx-4.7.2-devpack vim git.install urlrewrite autohotkey.install clipx -y
 
