@@ -3,3 +3,4 @@
 3. `choco install git -y`
 4. `cd ~\`
 5. `git clone https://github.com/mwanchap/configs.git`
+6. `move-item .\configs\* .\ -force
