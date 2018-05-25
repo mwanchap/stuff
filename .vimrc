@@ -9,13 +9,13 @@ call vundle#begin('~/vimfiles/bundle/')
 Plugin 'VundleVim/Vundle.vim' "why do I have to tell vundle that I'm using vundle?
 Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
-"Plugin 'OrangeT/vim-csharp' "doesn't install properly
-"Plugin 'mhinz/vim-startify' "slows down startup
+Plugin 'OrangeT/vim-csharp'
+Plugin 'PProvost/vim-ps1'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()
 filetype plugin indent on
 "end of stuff required for vundle
-
 
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
@@ -71,6 +71,10 @@ nnoremap <PageDown> <C-d>
 inoremap <Esc> <Esc>`^
 inoremap <c-space> <c-n>
 
+"set up leader
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 :se autochdir   "auto-set current working directory to current file's directory
 
 "bad ideas regarding copy/paste that will be left for posterity
@@ -89,7 +93,7 @@ map f <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 
 "nerdtree
-map <C-w> :NERDTreeToggle<CR>
+map <Leader>w :NERDTreeToggle<CR>
 
 set diffexpr=MyDiff()
 function MyDiff()
