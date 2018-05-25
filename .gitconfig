@@ -3,7 +3,7 @@
 	email = matt.wanchap@cpal.com.au
 [core]
 	autocrlf = true
-	excludesfile = C:\\Users\\mwanc\\Documents\\gitignore_global.txt
+	excludesfile = C:\\configs\\.gitignore_global
 	editor = notepad
 [diff]
     tool = kdiff3
@@ -26,6 +26,7 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	required = true
+	process = git-lfs filter-process    
 [winUpdater]
 	recentlySeenVersion = 2.15.1.windows.2
 [branch]
