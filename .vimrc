@@ -12,6 +12,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'OrangeT/vim-csharp'
 Plugin 'PProvost/vim-ps1'
 Plugin 'tpope/vim-surround'
+Plugin 'michaeljsmith/vim-indent-object'
 
 call vundle#end()
 filetype plugin indent on
