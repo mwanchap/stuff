@@ -75,11 +75,14 @@ ScrollLock::
     }
 }
 
-Launch_App2::
-WinGet, browsers, list, ahk_exe firefox.exe
+;prevents some programs like vim and notepad catching the numpad minus key for consoles
+NumpadSub::Send #{NumpadSub}
+
+NumpadIns::
+WinGet, browsers, list, ahk_exe chrome.exe
 if(browsers = 0)
 {
-    Run firefox
+    Run chrome
     Sleep 1000
     Send {Tab}
 }
@@ -149,12 +152,12 @@ return
 return
 */
 
-^PrintScreen::
-	Run "C:\Windows\System32\SnippingTool.exe"
-	Sleep 500
-	WinActivate
-	Send ^n
-return
+;^PrintScreen::
+;	Run "C:\Windows\System32\SnippingTool.exe"
+;	Sleep 500
+;	WinActivate
+;	Send ^n
+;return
 
 ;Vim-style outlook shortcuts
 /*
