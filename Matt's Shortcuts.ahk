@@ -77,35 +77,38 @@ ScrollLock::
 
 ;prevents some programs like vim and notepad catching the numpad minus key for consoles
 NumpadSub::Send #{NumpadSub}
+NumpadEnd::WindowSwitch("gvim.exe", "gvim.exe")
+NumpadDown::WindowSwitch("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")
+NumpadIns::WindowSwitch("chrome.exe", "chrome")
 
-NumpadIns::
-WinGet, browsers, list, ahk_exe chrome.exe
-if(browsers = 0)
+WindowSwitch(appName, runCmd)
 {
-    Run chrome
-    Sleep 1000
-    Send {Tab}
-}
-else if(browsers >= 1)
-{
-    i := 1
-    loop
+    WinGet, matchingWindows, list, ahk_exe %appName%
+    if(matchingWindows = 0)
     {
-        win = % browsers%i%
-        IfWinNotActive, ahk_id %win% ;if it's not already activated, activate the first one
+        Run % runCmd
+    }
+    else if(matchingWindows >= 1)
+    {
+        i := 1
+        loop
         {
-            WinActivate, ahk_id %win% ; use the window found above
-            break
-        }
-        else ; already active, increment to next one, loop again
-        {
-            i++
-		if (i > browsers)
-			i := 1
+            win = % matchingWindows%i%
+            IfWinNotActive, ahk_id %win% ;if it's not already activated, activate the first one
+            {
+                WinActivate, ahk_id %win% ; use the window found above
+                break
+            }
+            else ; already active, increment to next one, loop again
+            {
+                i++
+            if (i > matchingWindows)
+                i := 1
+            }
         }
     }
+    return
 }
-return
 
 :*:ssf::
 (
