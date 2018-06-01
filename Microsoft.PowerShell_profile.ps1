@@ -33,7 +33,7 @@ write-host "Scripts are in " -nonewline
 write-host "`$scriptdir" -ForegroundColor "Green"  -nonewline
 write-host ", other stuff goes in " -nonewline
 write-host "`$homedir" -ForegroundColor "Green"
-Set-Location $scriptdir
+Set-Location "C:\Code"
 
 function prompt
 {
