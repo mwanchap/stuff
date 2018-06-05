@@ -79,6 +79,15 @@ ScrollLock::
 NumpadSub::Send #{NumpadSub}
 NumpadEnd::WindowSwitch("gvim.exe", "gvim.exe")
 NumpadDown::WindowSwitch("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")
+
+;opens skype search
+NumpadPgDn::
+{
+    Send ^!+3
+    Send {Escape}
+    return
+}
+
 NumpadIns::WindowSwitch("chrome.exe", "chrome")
 
 WindowSwitch(appName, runCmd)
