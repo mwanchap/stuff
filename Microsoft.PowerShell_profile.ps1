@@ -57,7 +57,22 @@ function SFFields
 
 function SFUser
 {
-    force query "SELECT Id, Name FROM User WHERE Name LIKE '%$($args[0])%'" --format:csv | ConvertFrom-Csv
+    $users = (force query "select id from user where username like '%$($args[0])%' and isactive=true" --format:json | convertfrom-json)
+    
+    if($users.Count -eq 0)
+    {
+        write-host "No users found";
+        return;
+    }
+    else
+    {
+        if($users.Count -gt 1)
+        {
+            write-host "More than one user found, opening the first one"
+        }
+
+        start-process -filepath "https://cpal.my.salesforce.com/$($users[0].Id)?noredirect=1&isUserEntityOverride=1" 
+    }
 }
 
 function SFUserID
