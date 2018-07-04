@@ -45,6 +45,17 @@ function prompt
   "`n$('>' * ($nestedPromptLevel + 1))"
 }
 
+function search
+{
+    param
+    (
+        [string]$filePattern="*.*",
+        [string]$searchStr
+    )
+
+    get-childitem $filePattern -Recurse | sls $searchStr
+}
+
 function Obliterate
 {
     remove-item $args -force -recurse -confirm
@@ -57,6 +68,15 @@ function SFFields
 
 function SFUser
 {
+    <#
+    .SYNOPSIS
+        Opens the Salesforce user profile page for the first user returned by a query for a partial username match
+    .EXAMPLE
+        SFUser matt.wanchap
+    .PARAMETER
+        The only parameter is the username, which does not need to be complete.  The query uses LIKE so only part of the name needs to be provided.
+    #>
+    [CmdletBinding()]
     $users = (force query "select id from user where username like '%$($args[0])%' and isactive=true" --format:json | convertfrom-json)
     
     if($users.Count -eq 0)
