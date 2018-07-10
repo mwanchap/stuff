@@ -14,7 +14,7 @@
 #Set-PSReadlineOption -ResetTokenColors
 Set-Alias vim 'C:\Program Files (x86)\Vim\vim80\gvim.exe'
 Set-Alias csi 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\Roslyn\csi.exe'
-Set-Alias force 'C:\Utils\force.exe'
+Set-Alias sf 'C:\Utils\force.exe'
 Set-Alias sfdx 'C:\Program Files\Salesforce CLI\bin\sfdx.cmd'
 $azurecontext = Import-AzureRMContext -Path "C:\stuff\AzureProfile.json"
 #write-host "To log in to Azure:"
