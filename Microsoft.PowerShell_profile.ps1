@@ -64,7 +64,7 @@ function Obliterate
 
 function SFFields
 {
-    (force describe -n="$($args[0])" -t=sobject | ConvertFrom-Json).Fields | Sort-Object name | Select-Object name
+    (force describe -n="$($args[0])" -t=sobject | ConvertFrom-Json).Fields | Sort-Object name | Select-Object -ExpandProperty name
 }
 
 function SFUser
