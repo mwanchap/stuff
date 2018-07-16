@@ -78,21 +78,25 @@ function SFUser
         The only parameter is the username, which does not need to be complete.  The query uses LIKE so only part of the name needs to be provided.
     #>
     [CmdletBinding()]
-    $users = (force query "select id from user where username like '%$($args[0])%' and isactive=true" --format:json | convertfrom-json)
+    param
+    (
+        [Parameter(Mandatory)]
+        [string]$username
+    )
+
+    $users = (force query --format csv "select id from user where username like '%$username%' and isactive=true" | convertfrom-csv)
     
     if($users.Count -eq 0)
     {
-        write-host "No users found";
+        Write-Host "No users found";
         return;
     }
     else
     {
-        if($users.Count -gt 1)
+        foreach($user in $users)
         {
-            write-host "More than one user found, opening the first one"
+            Start-Process -filepath "https://cpal.my.salesforce.com/$($user.Id)?noredirect=1&isUserEntityOverride=1" 
         }
-
-        start-process -filepath "https://cpal.my.salesforce.com/$($users[0].Id)?noredirect=1&isUserEntityOverride=1" 
     }
 }
 
