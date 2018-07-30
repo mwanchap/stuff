@@ -57,11 +57,12 @@ ScheduleStartupTask -TaskName "startup - remove outlook reply sig" -TaskDescript
 ("IIS-WebServerRole","IIS-WebServer","IIS-CommonHttpFeatures","IIS-HttpErrors","IIS-HttpRedirect","IIS-ApplicationDevelopment","IIS-NetFxExtensibility","IIS-NetFxExtensibility45","IIS-HealthAndDiagnostics","IIS-HttpLogging","IIS-LoggingLibraries","IIS-RequestMonitor","IIS-HttpTracing","IIS-Security","IIS-URLAuthorization","IIS-RequestFiltering","IIS-IPSecurity","IIS-Performance","IIS-HttpCompressionDynamic","IIS-WebServerManagementTools","IIS-ManagementScriptingTools","IIS-IIS6ManagementCompatibility","IIS-Metabase","IIS-StaticContent","IIS-DefaultDocument","IIS-DirectoryBrowsing","IIS-WebSockets","IIS-ApplicationInit","IIS-ASPNET","IIS-ASPNET45","IIS-ASP","IIS-CGI","IIS-ISAPIExtensions","IIS-ISAPIFilter","IIS-ServerSideIncludes","IIS-CustomLogging","IIS-BasicAuthentication","IIS-HttpCompressionStatic","IIS-ManagementConsole","IIS-ManagementService","IIS-WMICompatibility","IIS-LegacyScripts","IIS-LegacySnapIn","IIS-CertProvider","IIS-WindowsAuthentication","IIS-DigestAuthentication","IIS-ClientCertificateMappingAuthentication","IIS-IISCertificateMappingAuthentication","IIS-ODBCLogging") | % { Enable-WindowsOptionalFeature -Online -FeatureName $_ }
 
 #other software
-choco install nodejs.install tomighty sysinternals 7zip.install firefox vlc conemu paint.net windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree spotify kdiff3 sql-server-management-studio microsoftazurestorageexplorer TortoiseGit rdcman python3 qmmp postman sharex winscp -y
+choco install googlechrome.canary nodejs.install sysinternals 7zip.install firefox vlc conemu paint.net windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree spotify kdiff3 sql-server-management-studio microsoftazurestorageexplorer TortoiseGit rdcman qmmp postman sharex winscp -y
 
 #todo: install force.com cli
 
 #python stuff
+choco install python3 -y
 python -m pip install --upgrade pip
 python -m pip install matplotlib scipy numpy openpyxl pandas
 
