@@ -3,7 +3,7 @@ new-item C:\code -type dir
 new-item C:\scratch -type dir
 
 #important dev stuff
-choco install googlechrome visualstudio2017professional visualstudio2017-workload-netweb visualstudio2017-workload-azure netfx-4.7.2-devpack vim git.install urlrewrite autohotkey.install ditto alt-tab-terminator -y
+choco install googlechrome visualstudio2017professional visualstudio2017-workload-netweb visualstudio2017-workload-azure netfx-4.7.2-devpack vim git.install urlrewrite autohotkey.install ditto alt-tab-terminator vsvim -y
 
 #setup redirected configs for vim, git and PS, then install vim plugins
 "source C:\configs\.vimrc" | out-file ~\.vimrc -NoNewline -Encoding utf8;
