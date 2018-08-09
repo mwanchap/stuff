@@ -16,7 +16,15 @@ foreach ($task in $tasks)
 }
 
 #clear scratch dir
+write-host "Clearing scratch dir..."
 Remove-Item C:\scratch\* -Recurse -Force
 
-#TODO: remove outlook reply sig
+#remove outlook reply sig
+#TODO: this might not work on future installs.  perhaps find the correct subkey where Account Name == "Matt.Wanchap@cpal.com.au"?
+write-host "Removing outlook reply sig..."
+$settingsLocation = "HKCU:\Software\Microsoft\Office\16.0\Outlook\Profiles\matt.wanchap\9375CFF0413111d3B88A00104B2A6676\00000002\"
 
+if(Test-Path $settingsLocation)
+{
+    Set-ItemProperty -Path $settingsLocation -Name "Reply-Forward Signature" -Value "(none)"
+}
