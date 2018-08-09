@@ -46,9 +46,7 @@ function ScheduleStartupTask
     Register-ScheduledTask -TaskName $TaskName -InputObject $newTask
 }
 
-ScheduleStartupTask -TaskName "startup - ahk shortcuts" -TaskDescription "Runs my AHK shortcuts at startup" -ExecPath "C:\configs\Matt's Shortcuts.ahk";
-ScheduleStartupTask -TaskName "startup - easywindowdrag" -TaskDescription "Runs AHK easywindowdrag script at startup" -ExecPath "C:\configs\EasyWindowDrag_(KDE).ahk";
-ScheduleStartupTask -TaskName "startup - negativescreen" -TaskDescription "Runs negativescreen at startup" -ExecPath "negativescreen";
+ScheduleStartupTask -TaskName "startup tasks" -TaskDescription "Runs startup tasks script" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". 'C:\configs\startup tasks.ps1'""";
 
 #powershell-executing tasks
 $psGenericArgs = "-WindowStyle Hidden -NoProfile";
