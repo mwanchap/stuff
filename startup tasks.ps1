@@ -1,5 +1,12 @@
 $ErrorActionPreference = "Inquire"
 
+function Write-Heading
+{
+    $NL = [System.Environment]::NewLine
+    Write-Host -ForegroundColor Blue "$NL    $args $NL"
+}
+
+Write-Heading "Running tasks..."
 #execute a bunch of things
 $tasks = @(
     [pscustomobject]@{name="ahk shortcuts"; exec = "C:\configs\Matt's Shortcuts.ahk"},
@@ -11,20 +18,25 @@ $tasks = @(
 
 foreach ($task in $tasks)
 {
-    write-host "starting $($task.name)";
+    write-host "Starting $($task.name)";
     . $task.exec
 }
 
 #clear scratch dir
-write-host "Clearing scratch dir..."
+Write-Heading "Clearing scratch dir..."
 Remove-Item C:\scratch\* -Recurse -Force
 
 #remove outlook reply sig
 #TODO: this might not work on future installs.  perhaps find the correct subkey where Account Name == "Matt.Wanchap@cpal.com.au"?
-write-host "Removing outlook reply sig..."
+Write-Heading "Removing outlook reply sig..."
 $settingsLocation = "HKCU:\Software\Microsoft\Office\16.0\Outlook\Profiles\matt.wanchap\9375CFF0413111d3B88A00104B2A6676\00000002\"
 
 if(Test-Path $settingsLocation)
 {
     Set-ItemProperty -Path $settingsLocation -Name "Reply-Forward Signature" -Value "(none)"
 }
+
+#check for outdated packages
+Write-Heading "Checking for outdated packages"
+. choco outdated
+
