@@ -1,3 +1,4 @@
+#Requires -RunAsAdministrator
 $ErrorActionPreference = "Inquire"
 
 function Write-Heading
