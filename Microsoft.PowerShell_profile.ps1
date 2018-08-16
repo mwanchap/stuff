@@ -1,5 +1,9 @@
 Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
 
+Import-Module VSTeam
+Add-VSTeamAccount -Profile vsts -Drive vsteam
+New-PSDrive -Name vsteam -PSProvider SHiPS -Root 'VSTeam#VSAccount'
+
 #$host.UI.RawUI.ForegroundColor = "DarkGray"
 #$host.UI.RawUI.BackgroundColor = "White"
 #$host.PrivateData.VerboseForegroundColor = "DarkYellow"
