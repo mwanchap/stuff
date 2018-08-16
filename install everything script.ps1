@@ -79,4 +79,4 @@ Update-Help
 #python stuff
 choco install python3 -y
 python -m pip install --upgrade pip
-python -m pip install matplotlib scipy numpy openpyxl pandas
+python -m pip install matplotlib scipy numpy openpyxl pandas jupyter
