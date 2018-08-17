@@ -48,16 +48,11 @@ function ScheduleStartupTask
 
 ScheduleStartupTask -TaskName "startup tasks" -TaskDescription "Runs startup tasks script" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". 'C:\configs\startup tasks.ps1'""";
 
-#powershell-executing tasks
-$psGenericArgs = "-WindowStyle Hidden -NoProfile";
-ScheduleStartupTask -TaskName "startup - clear scratch dir" -TaskDescription "Erases everything in the scratch dir" -ExecPath "powershell" -ExecArgs "$psGenericArgs -Command ""Remove-Item C:\scratch\* -Recurse -Force""";
-ScheduleStartupTask -TaskName "startup - remove outlook reply sig" -TaskDescription "Removes the reply signature from outlook" -ExecPath "powershell" -ExecArgs "$psGenericArgs -Command "" """;
-
 #IIS stuff
 ("IIS-WebServerRole","IIS-WebServer","IIS-CommonHttpFeatures","IIS-HttpErrors","IIS-HttpRedirect","IIS-ApplicationDevelopment","IIS-NetFxExtensibility","IIS-NetFxExtensibility45","IIS-HealthAndDiagnostics","IIS-HttpLogging","IIS-LoggingLibraries","IIS-RequestMonitor","IIS-HttpTracing","IIS-Security","IIS-URLAuthorization","IIS-RequestFiltering","IIS-IPSecurity","IIS-Performance","IIS-HttpCompressionDynamic","IIS-WebServerManagementTools","IIS-ManagementScriptingTools","IIS-IIS6ManagementCompatibility","IIS-Metabase","IIS-StaticContent","IIS-DefaultDocument","IIS-DirectoryBrowsing","IIS-WebSockets","IIS-ApplicationInit","IIS-ASPNET","IIS-ASPNET45","IIS-ASP","IIS-CGI","IIS-ISAPIExtensions","IIS-ISAPIFilter","IIS-ServerSideIncludes","IIS-CustomLogging","IIS-BasicAuthentication","IIS-HttpCompressionStatic","IIS-ManagementConsole","IIS-ManagementService","IIS-WMICompatibility","IIS-LegacyScripts","IIS-LegacySnapIn","IIS-CertProvider","IIS-WindowsAuthentication","IIS-DigestAuthentication","IIS-ClientCertificateMappingAuthentication","IIS-IISCertificateMappingAuthentication","IIS-ODBCLogging") | % { write-host $_; Enable-WindowsOptionalFeature -Online -FeatureName $_; }
 
 #other software
-choco install googlechrome.canary nodejs.install sysinternals 7zip.install firefox vlc conemu paint.net windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree spotify kdiff3 sql-server-management-studio microsoftazurestorageexplorer TortoiseGit rdcman qmmp postman sharex winscp force-cli rescuetime ilspy -y
+choco install googlechrome.canary nodejs.install sysinternals 7zip.install firefox vlc conemu paint.net windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree spotify kdiff3 sql-server-management-studio microsoftazurestorageexplorer TortoiseGit rdcman qmmp postman sharex winscp force-cli rescuetime ilspy grepwin -y
 
 #sharex hotkey
 if (Test-Path "$homedir\ShareX")
