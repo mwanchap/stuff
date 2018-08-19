@@ -36,7 +36,13 @@ if(Test-Path $settingsLocation)
     Set-ItemProperty -Path $settingsLocation -Name "Reply-Forward Signature" -Value "(none)"
 }
 
-#check for outdated packages
-Write-Heading "Upgrading packages"
-. choco upgrade all
+#kill exclaimer
+Write-Heading "Killing exclaimer..."
+Get-Process exsync | kill;
 
+#check for outdated packages
+Write-Heading "Checking for outdated packages..."
+. choco outdated
+
+Write-Heading "Done"
+Read-Host "Press return to finish"
