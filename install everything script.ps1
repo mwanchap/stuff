@@ -1,17 +1,14 @@
-#create directories
-new-item C:\code -type dir
-new-item C:\scratch -type dir
+#create directories if they don't already exist
+("C:\code", "C:\scratch") | foreach-object
+{
+    if (-not (Test-Path $_))
+    {
+        new-item $_ -type dir
+    }
+}
 
 #important dev stuff
-choco install googlechrome visualstudio2017professional visualstudio2017-workload-netweb visualstudio2017-workload-azure netfx-4.7.2-devpack vim git.install urlrewrite autohotkey.install ditto alt-tab-terminator vsvim -y
-
-#setup redirected configs for vim, git and PS, then install vim plugins
-"source C:\configs\.vimrc" | out-file ~\.vimrc -NoNewline -Encoding utf8;
-"[include]`n    path = C:\\configs\\.gitconfig" | out-file ~\.gitconfig -NoNewline -Encoding utf8;
-". C:\configs\Microsoft.PowerShell_profile.ps1" | out-file $profile -NoNewline -Encoding utf8;
-new-item ~\vimfiles\bundle -type dir | set-location;
-git clone https://github.com/VundleVim/Vundle.vim.git;
-vim +PluginInstall +qall;
+choco install googlechrome vim git autohotkey.install ditto alt-tab-terminator -y
 
 #schedule startup tasks
 function ScheduleStartupTask
@@ -47,6 +44,17 @@ function ScheduleStartupTask
 }
 
 ScheduleStartupTask -TaskName "startup tasks" -TaskDescription "Runs startup tasks script" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". 'C:\configs\startup tasks.ps1'""";
+
+#setup redirected configs for vim, git and PS, then install vim plugins
+"source C:\configs\.vimrc" | out-file ~\.vimrc -NoNewline -Encoding utf8;
+"[include]`n    path = C:\\configs\\.gitconfig" | out-file ~\.gitconfig -NoNewline -Encoding utf8;
+". C:\configs\Microsoft.PowerShell_profile.ps1" | out-file $profile -NoNewline -Encoding utf8;
+new-item ~\vimfiles\bundle -type dir | set-location;
+git clone https://github.com/VundleVim/Vundle.vim.git;
+vim +PluginInstall +qall;
+
+#visual studio stuff
+choco install visualstudio2017professional visualstudio2017-workload-netweb visualstudio2017-workload-azure netfx-4.7.2-devpack vsvim urlrewrite -y
 
 #IIS stuff
 ("IIS-WebServerRole","IIS-WebServer","IIS-CommonHttpFeatures","IIS-HttpErrors","IIS-HttpRedirect","IIS-ApplicationDevelopment","IIS-NetFxExtensibility","IIS-NetFxExtensibility45","IIS-HealthAndDiagnostics","IIS-HttpLogging","IIS-LoggingLibraries","IIS-RequestMonitor","IIS-HttpTracing","IIS-Security","IIS-URLAuthorization","IIS-RequestFiltering","IIS-IPSecurity","IIS-Performance","IIS-HttpCompressionDynamic","IIS-WebServerManagementTools","IIS-ManagementScriptingTools","IIS-IIS6ManagementCompatibility","IIS-Metabase","IIS-StaticContent","IIS-DefaultDocument","IIS-DirectoryBrowsing","IIS-WebSockets","IIS-ApplicationInit","IIS-ASPNET","IIS-ASPNET45","IIS-ASP","IIS-CGI","IIS-ISAPIExtensions","IIS-ISAPIFilter","IIS-ServerSideIncludes","IIS-CustomLogging","IIS-BasicAuthentication","IIS-HttpCompressionStatic","IIS-ManagementConsole","IIS-ManagementService","IIS-WMICompatibility","IIS-LegacyScripts","IIS-LegacySnapIn","IIS-CertProvider","IIS-WindowsAuthentication","IIS-DigestAuthentication","IIS-ClientCertificateMappingAuthentication","IIS-IISCertificateMappingAuthentication","IIS-ODBCLogging") | % { write-host $_; Enable-WindowsOptionalFeature -Online -FeatureName $_; }
