@@ -38,7 +38,7 @@ if(Test-Path $settingsLocation)
 
 #kill exclaimer
 Write-Heading "Killing exclaimer..."
-Get-Process exsync | kill;
+Get-Process exsync -ErrorAction SilentlyContinue | Stop-Process;
 
 #check for outdated packages
 Write-Heading "Checking for outdated packages..."
