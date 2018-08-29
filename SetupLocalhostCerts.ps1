@@ -1,3 +1,5 @@
+Import-Module WebAdministration
+
 #check that the cert doesn't already exist
 $currentCert = (Get-Childitem Cert:\CurrentUser\Root\ | where Subject -eq CN=*.localhost.com)
 
@@ -10,19 +12,14 @@ if($currentCert -ne $null)
 $domain = "*.localhost.com", "localhost"
 Write-Host "Creating self-signed cert for $domain"
 $cert = New-SelfSignedCertificate -DnsName $domain -CertStoreLocation "cert:\LocalMachine\My" -NotAfter (Get-Date).AddYears(5)
-$thumb = $cert.GetCertHashString()
+$thumb = $cert.Thumbprint
 
-Write-Host "Deleting existing cert bindings used by IIS Express"
+Write-Host "Updating existing cert bindings used by IIS Express with new self-signed cert"
 
-For ($i=44300; $i -le 44399; $i++) {
+foreach ($port in 44300..44399) {
     # silence the success output spam with  & { } 1 > $null
-    & { netsh http delete sslcert ipport=0.0.0.0:$i } 1 > $null
-}
-
-Write-Host "Adding bindings for new self-signed cert to be used by IIS Express"
-For ($i=44300; $i -le 44399; $i++) {
-    # I have no idea what the magic guid is
-    & { netsh http add sslcert ipport=0.0.0.0:$i certhash=$thumb appid=`{214124cd-d05b-4309-9af9-9caa44b2b74a`} } 1 > $null
+    & { netsh http delete sslcert ipport=0.0.0.0:$port } 1 > $null
+    & { netsh http add sslcert ipport=0.0.0.0:$port certhash=$thumb appid=`{214124cd-d05b-4309-9af9-9caa44b2b74a`} } 1 > $null
 }
 
 Write-Host "Adding self-signed cert to root cert authority so it's always trusted"
@@ -32,4 +29,7 @@ $Store = New-Object  -TypeName System.Security.Cryptography.X509Certificates.X50
 $Store.Open([System.Security.Cryptography.X509Certificates.OpenFlags]::ReadWrite)
 $Store.Add($cert)
 $Store.Close()
+
+# update all existing SSL bindings to use the new cert
+Get-WebBinding -protocol https | Foreach-Object { $_.AddSslCertificate($thumb, "My") }
 Write-Host "Completed self-signed cert setup"
