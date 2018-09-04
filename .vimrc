@@ -40,8 +40,10 @@ set enc=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8
 set textwidth=0
-set shell=powershell
+set shell=powershell\ -noprofile
 set shellcmdflag=-command
+set splitbelow
+set splitright
 
 nnoremap ? /\v
 vnoremap ? /\v
