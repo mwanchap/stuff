@@ -39,6 +39,8 @@ function ScheduleStartupTask
     $trigger = New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME
     $principal = New-ScheduledTaskPrincipal -UserId $env:USERNAME -RunLevel Highest
     $settings = New-ScheduledTaskSettingsSet
+    $settings.DisallowStartIfOnBatteries = $false
+    $settings.StopIfGoingOnBatteries = $false
     $newTask = New-ScheduledTask -Action $action -Principal $principal -Trigger $trigger -Settings $settings -Description TaskDescription
     Register-ScheduledTask -TaskName $TaskName -InputObject $newTask
 }
