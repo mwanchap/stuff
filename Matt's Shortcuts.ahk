@@ -28,13 +28,13 @@ $Escape::SetCapsLockState Off
     return
 }
 
-#z::
-{
-    Run "C:\Program Files (x86)\Vim\vim80\gvim.exe"
-    Sleep 200
-    WinActivate, % "[No Name] - GVIM"
-    return
-}
+;#z::
+;{
+;    Run "C:\Program Files (x86)\Vim\vim80\gvim.exe"
+;    Sleep 200
+;    WinActivate, % "[No Name] - GVIM"
+;    return
+;}
 
 ;alt-tab replacement
 ;`::
