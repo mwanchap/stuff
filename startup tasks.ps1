@@ -14,6 +14,7 @@ $tasks = @(
     #[pscustomobject]@{name="negativescreen"; exec = "negativescreen"},
     [pscustomobject]@{name="conemu"; exec = "C:\Program Files\ConEmu\ConEmu64.exe"},
     [pscustomobject]@{name="sharex"; exec = "C:\Program Files\ShareX\ShareX.exe"}
+    [pscustomobject]@{name="keypirinha"; exec = "keypirinha"}
 );
 
 foreach ($task in $tasks)
