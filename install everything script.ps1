@@ -8,7 +8,7 @@
 }
 
 #important dev stuff
-choco install googlechrome vim git autohotkey.install ditto alt-tab-terminator -y
+choco install googlechrome vim git autohotkey.install ditto alt-tab-terminator keypirinha -y
 
 #schedule startup tasks
 function ScheduleStartupTask
