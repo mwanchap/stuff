@@ -11,10 +11,8 @@ Write-Heading "Running tasks..."
 $tasks = @(
     [pscustomobject]@{name="ahk shortcuts"; exec = "C:\configs\Matt's Shortcuts.ahk"},
     [pscustomobject]@{name="easywindowdrag"; exec = "C:\configs\EasyWindowDrag_(KDE).ahk"},
-    #[pscustomobject]@{name="negativescreen"; exec = "negativescreen"},
     [pscustomobject]@{name="conemu"; exec = "C:\Program Files\ConEmu\ConEmu64.exe"},
     [pscustomobject]@{name="sharex"; exec = "C:\Program Files\ShareX\ShareX.exe"}
-    [pscustomobject]@{name="keypirinha"; exec = "keypirinha"}
 );
 
 foreach ($task in $tasks)
