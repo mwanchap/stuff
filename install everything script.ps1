@@ -56,7 +56,16 @@ git clone https://github.com/VundleVim/Vundle.vim.git;
 vim +PluginInstall +qall;
 
 #visual studio stuff
-choco install visualstudio2017professional visualstudio2017-workload-netweb visualstudio2017-workload-azure netfx-4.7.2-devpack vsvim urlrewrite -y
+choco install visualstudio2017professional visualstudio2017-workload-netweb visualstudio2017-workload-azure netfx-4.7.2-devpack vsvim codemaid urlrewrite -y
+
+#vscode stuff
+choco install vscode vscode-csharp vscode-icons vscode-powershell -y
+
+#manual VS config stuff
+    #install these extensions
+        #relative number
+        #editor guidelines (Paul Harrington's one)
+    #import codemaid settings from CodeMaid.config
 
 #IIS stuff
 ("IIS-WebServerRole","IIS-WebServer","IIS-CommonHttpFeatures","IIS-HttpErrors","IIS-HttpRedirect",
