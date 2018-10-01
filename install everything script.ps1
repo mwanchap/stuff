@@ -1,6 +1,5 @@
 #create directories if they don't already exist
-("C:\code", "C:\scratch") | foreach-object
-{
+("C:\code", "C:\scratch") | foreach-object {
     if (-not (Test-Path $_))
     {
         new-item $_ -type dir
