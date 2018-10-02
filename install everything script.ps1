@@ -68,12 +68,12 @@ choco install vscode vscode-csharp vscode-icons vscode-powershell -y
 
 #IIS stuff
 ("IIS-WebServerRole","IIS-WebServer","IIS-CommonHttpFeatures","IIS-HttpErrors","IIS-HttpRedirect",
-"IIS-ApplicationDevelopment","IIS-NetFxExtensibility","IIS-NetFxExtensibility45","IIS-HealthAndDiagnostics",
+"IIS-ApplicationDevelopment","IIS-NetFxExtensibility45","IIS-HealthAndDiagnostics",
 "IIS-HttpLogging","IIS-LoggingLibraries","IIS-RequestMonitor","IIS-HttpTracing","IIS-Security",
 "IIS-URLAuthorization","IIS-RequestFiltering","IIS-IPSecurity","IIS-Performance","IIS-HttpCompressionDynamic",
 "IIS-WebServerManagementTools","IIS-ManagementScriptingTools","IIS-IIS6ManagementCompatibility","IIS-Metabase",
 "IIS-StaticContent","IIS-DefaultDocument","IIS-DirectoryBrowsing","IIS-WebSockets","IIS-ApplicationInit",
-"IIS-ASPNET","IIS-ASPNET45","IIS-ASP","IIS-CGI","IIS-ISAPIExtensions","IIS-ISAPIFilter",
+"IIS-ASPNET45","IIS-CGI","IIS-ISAPIExtensions","IIS-ISAPIFilter",
 "IIS-ServerSideIncludes","IIS-CustomLogging","IIS-BasicAuthentication","IIS-HttpCompressionStatic",
 "IIS-ManagementConsole","IIS-ManagementService","IIS-WMICompatibility","IIS-LegacyScripts",
 "IIS-LegacySnapIn","IIS-CertProvider","IIS-WindowsAuthentication","IIS-DigestAuthentication",
