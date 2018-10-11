@@ -83,13 +83,7 @@ NumpadEnd::WindowSwitch("gvim.exe", "gvim.exe")
 NumpadDown::WindowSwitch("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")
 AppsKey & j::Send #{NumpadSub}
 AppsKey & k::Send ^#k
-^AppsKey::
-{
-    Send #{NumpadSub}
-    Sleep 100
-    WinActivate, % "ahk_exe ConEmu64.exe"
-    return
-}
+^AppsKey::Send #{NumpadSub}
 !AppsKey::Send ^#k
 AppsKey::Send {AppsKey}
 
