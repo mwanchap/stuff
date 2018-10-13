@@ -24,6 +24,7 @@ function ScheduleStartupTask
         [string]$TaskName,
         [string]$TaskDescription,
         [string]$ExecPath,
+        [Microsoft.PowerShell.Cmdletization.GeneratedTypes.ScheduledTask.RunLevelEnum]$RunLevel,
         $ExecArgs
     )
 
@@ -43,7 +44,7 @@ function ScheduleStartupTask
 
     $action = New-ScheduledTaskAction @actionParams
     $trigger = New-ScheduledTaskTrigger -AtLogOn -User $env:USERNAME
-    $principal = New-ScheduledTaskPrincipal -UserId $env:USERNAME -RunLevel Highest
+    $principal = New-ScheduledTaskPrincipal -UserId $env:USERNAME -RunLevel $RunLevel
     $settings = New-ScheduledTaskSettingsSet
     $settings.DisallowStartIfOnBatteries = $false
     $settings.StopIfGoingOnBatteries = $false
@@ -51,7 +52,8 @@ function ScheduleStartupTask
     Register-ScheduledTask -TaskName $TaskName -InputObject $newTask
 }
 
-ScheduleStartupTask -TaskName "startup tasks" -TaskDescription "Runs startup tasks script" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". 'C:\configs\startup tasks.ps1'""";
+ScheduleStartupTask -TaskName "startup tasks" -TaskDescription "Runs startup tasks script" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". 'C:\configs\startup tasks.ps1'""" -RunLevel Highest;
+ScheduleStartupTask -TaskName "run conemu" -TaskDescription "Runs conemu as non-admin" -ExecPath "C:\Program Files\ConEmu\ConEmu64.exe" -RunLevel Limited;
 
 #setup redirected configs for vim, git and PS, then install vim plugins
 "source C:\configs\.vimrc" | out-file ~\.vimrc -NoNewline -Encoding utf8;
