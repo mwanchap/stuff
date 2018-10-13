@@ -7,12 +7,11 @@
 }
 
 #add home tab domain to hosts file if it's not already there
-$hostsHome = "127.0.0.1    ho.me";
-
-if($null -eq (Select-String $hostsHome "C:\windows\system32\drivers\etc\hosts"))
-{
-    $hostsHome | Out-File "C:\Windows\system32\drivers\etc\hosts" -Append -Encoding ascii
-}
+#$hostsHome = "127.0.0.1    localhost.com;"
+#if($null -eq (Select-String $hostsHome "C:\windows\system32\drivers\etc\hosts"))
+#{
+#    $hostsHome | Out-File "C:\Windows\system32\drivers\etc\hosts" -Append -Encoding ascii
+#}
 
 #important dev stuff
 choco install googlechrome vim git autohotkey.install ditto alt-tab-terminator keypirinha -y
