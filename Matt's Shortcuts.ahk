@@ -76,11 +76,11 @@ ScrollLock::
 }
 
 ;prevents some programs like vim and notepad catching the numpad minus key for consoles
-NumpadSub::Send #{NumpadSub}
-NumpadAdd::Send ^#k
-^AppsKey::Send #{NumpadSub}
-!AppsKey::Send ^#k
-AppsKey::Send {AppsKey}
+;NumpadSub::Send #{NumpadSub}
+;NumpadAdd::Send ^#k
+;^AppsKey::Send #{NumpadSub}
+;!AppsKey::Send ^#k
+;AppsKey::Send {AppsKey}
 !#n::WindowSwitch("gvim.exe", "gvim.exe")
 !#m::WindowSwitch("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")
 !#h::WindowSwitch("chrome.exe", "chrome")
