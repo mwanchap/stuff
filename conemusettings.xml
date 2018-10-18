@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-07-27 15:14:15" build="180626">
+		<key name=".Vanilla" modified="2018-10-19 08:42:42" build="180626">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -9,22 +9,22 @@
 			<value name="StartFarFolders" type="hex" data="00"/>
 			<value name="StartFarEditors" type="hex" data="00"/>
 			<value name="StartCreateDelay" type="ulong" data="100"/>
-			<value name="ColorTable00" type="dword" data="00ffffff"/>
-			<value name="ColorTable01" type="dword" data="00573821"/>
-			<value name="ColorTable02" type="dword" data="00004638"/>
-			<value name="ColorTable03" type="dword" data="004f4c1f"/>
-			<value name="ColorTable04" type="dword" data="00141464"/>
-			<value name="ColorTable05" type="dword" data="00542c44"/>
-			<value name="ColorTable06" type="dword" data="00005b75"/>
-			<value name="ColorTable07" type="dword" data="004c4d4d"/>
-			<value name="ColorTable08" type="dword" data="008c908e"/>
-			<value name="ColorTable09" type="dword" data="00ae7142"/>
-			<value name="ColorTable10" type="dword" data="00008c71"/>
-			<value name="ColorTable11" type="dword" data="009f993e"/>
-			<value name="ColorTable12" type="dword" data="002928c8"/>
-			<value name="ColorTable13" type="dword" data="00a85989"/>
-			<value name="ColorTable14" type="dword" data="0000b7ea"/>
-			<value name="ColorTable15" type="dword" data="00000000"/>
+			<value name="ColorTable00" type="dword" data="00f7f7ea"/>
+			<value name="ColorTable01" type="dword" data="00e3f6fd"/>
+			<value name="ColorTable02" type="dword" data="00756e58"/>
+			<value name="ColorTable03" type="dword" data="00837b65"/>
+			<value name="ColorTable04" type="dword" data="00164bcb"/>
+			<value name="ColorTable05" type="dword" data="00c4716c"/>
+			<value name="ColorTable06" type="dword" data="00969483"/>
+			<value name="ColorTable07" type="dword" data="00423607"/>
+			<value name="ColorTable08" type="dword" data="00a1a193"/>
+			<value name="ColorTable09" type="dword" data="00d28b26"/>
+			<value name="ColorTable10" type="dword" data="00009985"/>
+			<value name="ColorTable11" type="dword" data="0098a12a"/>
+			<value name="ColorTable12" type="dword" data="002f32dc"/>
+			<value name="ColorTable13" type="dword" data="008236d3"/>
+			<value name="ColorTable14" type="dword" data="00007ba4"/>
+			<value name="ColorTable15" type="dword" data="00362b00"/>
 			<value name="ColorTable16" type="dword" data="00000000"/>
 			<value name="ColorTable17" type="dword" data="00800000"/>
 			<value name="ColorTable18" type="dword" data="00008000"/>
@@ -139,7 +139,7 @@
 			<value name="bgImageColors" type="dword" data="ffffffff"/>
 			<value name="bgOperation" type="hex" data="00"/>
 			<value name="bgPluginAllowed" type="hex" data="01"/>
-			<value name="AlphaValue" type="hex" data="FF"/>
+			<value name="AlphaValue" type="hex" data="F1"/>
 			<value name="AlphaValueSeparate" type="hex" data="00"/>
 			<value name="AlphaValueInactive" type="hex" data="FF"/>
 			<value name="UserScreenTransparent" type="hex" data="00"/>
@@ -149,23 +149,23 @@
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
-			<value name="WindowMode" type="dword" data="00000520"/>
-			<value name="ConWnd X" type="long" data="-7"/>
+			<value name="WindowMode" type="dword" data="0000051f"/>
+			<value name="ConWnd X" type="long" data="6"/>
 			<value name="ConWnd Y" type="long" data="0"/>
-			<value name="LastMonitor" type="string" data="0,0,1920,1040"/>
+			<value name="LastMonitor" type="string" data="0,0,1920,1080"/>
 			<value name="ConWnd Width" type="dword" data="02000064"/>
-			<value name="ConWnd Height" type="dword" data="02000061"/>
+			<value name="ConWnd Height" type="dword" data="02000064"/>
 			<value name="16bit Height" type="ulong" data="0"/>
 			<value name="QuakeStyle" type="hex" data="02"/>
 			<value name="Restore2ActiveMon" type="hex" data="00"/>
-			<value name="QuakeAnimation" type="ulong" data="250"/>
+			<value name="QuakeAnimation" type="ulong" data="0"/>
 			<value name="HideCaption" type="hex" data="00"/>
 			<value name="HideChildCaption" type="hex" data="01"/>
 			<value name="FocusInChildWindows" type="hex" data="01"/>
 			<value name="HideCaptionAlways" type="hex" data="01"/>
 			<value name="HideCaptionAlwaysFrame" type="hex" data="FF"/>
-			<value name="HideCaptionAlwaysDelay" type="ulong" data="2000"/>
-			<value name="HideCaptionAlwaysDisappear" type="ulong" data="2000"/>
+			<value name="HideCaptionAlwaysDelay" type="ulong" data="0"/>
+			<value name="HideCaptionAlwaysDisappear" type="ulong" data="0"/>
 			<value name="DownShowHiddenMessage" type="hex" data="00"/>
 			<value name="DownShowExOnTopMessage" type="hex" data="00"/>
 			<value name="ConsoleFontName" type="string" data="Lucida Console"/>
@@ -333,7 +333,7 @@
 			<value name="HideInactiveConsoleTabs" type="hex" data="00"/>
 			<value name="ShowFarWindows" type="hex" data="01"/>
 			<value name="TryToCenter" type="hex" data="01"/>
-			<value name="CenterConsolePad" type="ulong" data="0"/>
+			<value name="CenterConsolePad" type="ulong" data="1"/>
 			<value name="ShowScrollbar" type="hex" data="02"/>
 			<value name="ScrollBarAppearDelay" type="ulong" data="100"/>
 			<value name="ScrollBarDisappearDelay" type="ulong" data="1000"/>
@@ -399,11 +399,11 @@
 			<value name="Update.DownloadPath" type="string" data="%TEMP%\ConEmu"/>
 			<value name="Update.LeavePackages" type="hex" data="00"/>
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
-			<key name="HotKeys" modified="2018-07-26 12:35:43" build="180626">
+			<key name="HotKeys" modified="2018-10-19 08:42:42" build="180626">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="000000a2"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
-				<value name="MinimizeRestore" type="dword" data="000011c0"/>
+				<value name="MinimizeRestore" type="dword" data="00125b4a"/>
 				<value name="MinimizeRestore2" type="dword" data="00005b6d"/>
 				<value name="GlobalRestore" type="dword" data="00000000"/>
 				<value name="CdExplorerPath" type="dword" data="00000000"/>
@@ -458,7 +458,7 @@
 				<value name="Multi.MoveRight" type="dword" data="00125b27"/>
 				<value name="CTS.VkBlockStart" type="dword" data="00000000"/>
 				<value name="CTS.VkTextStart" type="dword" data="00000000"/>
-				<value name="CTS.VkCopyFmt0" type="dword" data="00001143"/>
+				<value name="CTS.VkCopyFmt0" type="dword" data="0000112d"/>
 				<value name="CTS.VkCopyFmt1" type="dword" data="00101143"/>
 				<value name="CTS.VkCopyFmt2" type="dword" data="00000000"/>
 				<value name="CTS.VkCopyAll" type="dword" data="00000000"/>
@@ -644,10 +644,10 @@
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
 				</key>
-				<key name="Task6" modified="2018-07-26 12:34:29" build="180626">
+				<key name="Task6" modified="2018-10-19 08:42:42" build="180626">
 					<value name="Name" type="string" data="{Shells::PowerShell (Admin)}"/>
 					<value name="Flags" type="dword" data="00000004"/>
-					<value name="Hotkey" type="dword" data="8080806b"/>
+					<value name="Hotkey" type="dword" data="10125b4a"/>
 					<value name="GuiArgs" type="string" data=""/>
 					<value name="Cmd1" type="string" data="powershell.exe -new_console:a"/>
 					<value name="Active" type="long" data="0"/>
@@ -690,9 +690,14 @@
 			<value name="Language" type="string" data="en"/>
 			<value name="ClipboardAllLinesPosix" type="hex" data="00"/>
 			<value name="ClipboardFirstLinePosix" type="hex" data="00"/>
-			<value name="RestoreInactive" type="hex" data="00"/>
+			<value name="RestoreInactive" type="hex" data="01"/>
 			<value name="DynamicBufferHeight" type="hex" data="01"/>
 			<value name="StatusBar.Hide.WMode" type="hex" data="01"/>
+			<value name="CmdLineHistory" type="multi">
+				<line data="powershell.exe"/>
+				<line data="{Shells::PowerShell}"/>
+				<line data="{Bash::Git bash}"/>
+			</value>
 		</key>
 	</key>
 </key>
