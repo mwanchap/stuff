@@ -1,5 +1,5 @@
 #other software
-choco install googlechrome.canary nodejs.install sysinternals 7zip.install firefox vlc conemu paint.net windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree kdiff3 microsoftazurestorageexplorer TortoiseGit rdcman qmmp postman sharex winscp force-cli rescuetime ilspy grepwin -y
+choco install googlechrome.canary nodejs.install sysinternals 7zip.install firefox vlc conemu windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree kdiff3 microsoftazurestorageexplorer TortoiseGit rdcman qmmp postman sharex winscp force-cli rescuetime ilspy grepwin paint.net -y
 
 #sharex hotkey
 if (Test-Path "$homedir\ShareX")
