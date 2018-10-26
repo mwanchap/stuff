@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2018-10-19 08:42:42" build="180626">
+		<key name=".Vanilla" modified="2018-10-26 18:27:19" build="180309">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -42,7 +42,7 @@
 			<value name="ColorTable30" type="dword" data="0000ffff"/>
 			<value name="ColorTable31" type="dword" data="00ffffff"/>
 			<value name="ExtendColors" type="hex" data="00"/>
-			<value name="ExtendColorIdx" type="hex" data="0e"/>
+			<value name="ExtendColorIdx" type="hex" data="0E"/>
 			<value name="TextColorIdx" type="hex" data="10"/>
 			<value name="BackColorIdx" type="hex" data="10"/>
 			<value name="PopTextColorIdx" type="hex" data="10"/>
@@ -149,10 +149,10 @@
 			<value name="AutoSaveSizePos" type="hex" data="01"/>
 			<value name="Cascaded" type="hex" data="01"/>
 			<value name="IntegralSize" type="hex" data="00"/>
-			<value name="WindowMode" type="dword" data="0000051f"/>
-			<value name="ConWnd X" type="long" data="6"/>
-			<value name="ConWnd Y" type="long" data="0"/>
-			<value name="LastMonitor" type="string" data="0,0,1920,1080"/>
+			<value name="WindowMode" type="dword" data="00000520"/>
+			<value name="ConWnd X" type="long" data="-1"/>
+			<value name="ConWnd Y" type="long" data="21"/>
+			<value name="LastMonitor" type="string" data="0,0,1440,900"/>
 			<value name="ConWnd Width" type="dword" data="02000064"/>
 			<value name="ConWnd Height" type="dword" data="02000064"/>
 			<value name="16bit Height" type="ulong" data="0"/>
@@ -333,7 +333,7 @@
 			<value name="HideInactiveConsoleTabs" type="hex" data="00"/>
 			<value name="ShowFarWindows" type="hex" data="01"/>
 			<value name="TryToCenter" type="hex" data="01"/>
-			<value name="CenterConsolePad" type="ulong" data="1"/>
+			<value name="CenterConsolePad" type="ulong" data="5"/>
 			<value name="ShowScrollbar" type="hex" data="02"/>
 			<value name="ScrollBarAppearDelay" type="ulong" data="100"/>
 			<value name="ScrollBarDisappearDelay" type="ulong" data="1000"/>
