@@ -82,6 +82,16 @@ ScrollLock::
 ;!AppsKey::Send ^#k
 ;AppsKey::Send {AppsKey}
 Launch_App2::Send !#k
+
+; replacement for alt-tab shortcut - opens "switch to" module
+`::
+{
+    Send !#k
+    Sleep 10
+    Send Switch To`t
+    return
+}
+
 !#n::WindowSwitch("gvim.exe", "gvim.exe")
 !#m::WindowSwitch("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")
 !#h::WindowSwitch("chrome.exe", "chrome")
