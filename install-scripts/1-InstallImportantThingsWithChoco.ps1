@@ -9,13 +9,10 @@
 #install most useful stuff
 choco install googlechrome vim git autohotkey.install ditto alt-tab-terminator keypirinha -y
 
-#setup redirected configs for vim, git and PS, then install vim plugins
+#setup redirected configs for vim, git and PS
 "source C:\configs\.vimrc" | out-file ~\.vimrc -NoNewline -Encoding utf8;
 "[include]`n    path = C:\\configs\\.gitconfig" | out-file ~\.gitconfig -NoNewline -Encoding utf8;
 ". C:\configs\Microsoft.PowerShell_profile.ps1" | out-file $profile -NoNewline -Encoding utf8;
-new-item ~\vimfiles\bundle -type dir | set-location;
-git clone https://github.com/VundleVim/Vundle.vim.git;
-vim +PluginInstall +qall;
 
 #alt-tab terminator hotkey
 $attRegPath = "HKCU:\Software\Alexander Avdonin\Alt-Tab Terminator\3.0\"
