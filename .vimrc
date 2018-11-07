@@ -7,6 +7,9 @@ call vundle#begin('~/vimfiles/bundle/')
 
 "plugins go here
 Plugin 'VundleVim/Vundle.vim' "why do I have to tell vundle that I'm using vundle?
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdtree'
 Plugin 'OrangeT/vim-csharp'
@@ -99,6 +102,13 @@ let g:EasyMotion_smartcase = 1
 
 "nerdtree
 map <Leader>w :NERDTreeToggle<CR>
+
+"papercolor
+set background=light
+colorscheme PaperColor
+
+"airline
+let g:airline_theme=papercolor
 
 set diffexpr=MyDiff()
 function MyDiff()
