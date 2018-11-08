@@ -108,7 +108,7 @@ set background=light
 colorscheme PaperColor
 
 "airline
-let g:airline_theme=papercolor
+let g:airline_theme='papercolor'
 
 set diffexpr=MyDiff()
 function MyDiff()
