@@ -95,10 +95,9 @@ Launch_App2::Send !#k
 !#n::WindowSwitch("gvim.exe", "gvim.exe")
 !#m::WindowSwitch("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")
 !#h::WindowSwitch("chrome.exe", "chrome")
-
-;opens skype search
-NumpadPgDn::
+!#y::
 {
+    ;opens skype search
     Send ^!+3
     Send {Escape}
     return
@@ -107,11 +106,8 @@ NumpadPgDn::
 WindowSwitch(appName, runCmd)
 {
     WinGet, matchingWindows, list, ahk_exe %appName%
-    if(matchingWindows = 0)
-    {
-        Run % runCmd
-    }
-    else if(matchingWindows >= 1)
+
+    if(matchingWindows >= 1)
     {
         i := 1
         loop
@@ -130,6 +126,7 @@ WindowSwitch(appName, runCmd)
             }
         }
     }
+
     return
 }
 
