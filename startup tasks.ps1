@@ -10,8 +10,7 @@ function Write-Heading
 Write-Heading "Running tasks..."
 $tasks = @(
     [pscustomobject]@{name="ahk shortcuts"; exec = "C:\configs\Matt's Shortcuts.ahk"},
-    [pscustomobject]@{name="easywindowdrag"; exec = "C:\configs\EasyWindowDrag_(KDE).ahk"},
-    [pscustomobject]@{name="sharex"; exec = "C:\Program Files\ShareX\ShareX.exe"}
+    [pscustomobject]@{name="easywindowdrag"; exec = "C:\configs\EasyWindowDrag_(KDE).ahk"}
 );
 
 foreach ($task in $tasks)
@@ -25,7 +24,7 @@ Write-Heading "Clearing scratch dir..."
 Remove-Item C:\scratch\* -Recurse -Force
 
 #remove outlook reply sig
-#TODO: this might not work on future installs.  perhaps find the correct subkey where Account Name == "Matt.Wanchap@cpal.com.au"?
+#TODO: this might not work on future installs.  perhaps find the correct subkey where Account Name == email addy
 Write-Heading "Removing outlook reply sig..."
 $settingsLocation = "HKCU:\Software\Microsoft\Office\16.0\Outlook\Profiles\matt.wanchap\9375CFF0413111d3B88A00104B2A6676\00000002\"
 
