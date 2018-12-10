@@ -92,9 +92,11 @@ Launch_App2::Send !#k
     return
 }
 
-!#n::WindowSwitch("gvim.exe", "gvim.exe")
-!#m::WindowSwitch("devenv.exe", "C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\devenv.exe")
-!#h::WindowSwitch("chrome.exe", "chrome")
+!#n::WindowSwitch("gvim.exe")
+!#m::WindowSwitch("devenv.exe")
+!#h::WindowSwitch("chrome.exe")
+!#o::WindowSwitch("Code.exe")
+!#i::WindowSwitch("firefox.exe")
 !#y::
 {
     ;opens skype search
@@ -103,30 +105,12 @@ Launch_App2::Send !#k
     return
 }
 
-WindowSwitch(appName, runCmd)
+WindowSwitch(appName)
 {
-    WinGet, matchingWindows, list, ahk_exe %appName%
-
-    if(matchingWindows >= 1)
+    if WinExist("ahk_exe " . appName)
     {
-        i := 1
-        loop
-        {
-            win = % matchingWindows%i%
-            IfWinNotActive, ahk_id %win% ;if it's not already activated, activate the first one
-            {
-                WinActivate, ahk_id %win% ; use the window found above
-                break
-            }
-            else ; already active, increment to next one, loop again
-            {
-                i++
-            if (i > matchingWindows)
-                i := 1
-            }
-        }
+        WinActivate, ahk_exe %appName%
     }
-
     return
 }
 

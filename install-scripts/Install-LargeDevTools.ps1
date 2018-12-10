@@ -8,6 +8,7 @@ choco install vscode vscode-csharp vscode-icons vscode-powershell -y
     #install these extensions
         #relative number
         #editor guidelines (Paul Harrington's one)
+        #sonarlint
     #import codemaid settings from CodeMaid.config
 
 # vscode stuff, have to loop bc it can only install one at a time
