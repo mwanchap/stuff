@@ -451,7 +451,7 @@
 				<value name="KillProcessKey" type="dword" data="00121103"/>
 				<value name="KillAllButShellKey" type="dword" data="00125b13"/>
 				<value name="DuplicateRootKey" type="dword" data="00005b53"/>
-				<value name="CloseConEmuKey" type="dword" data="00005b73"/>
+				<value name="CloseConEmuKey" type="dword" data="00000000"/>
 				<value name="Multi.Rename" type="dword" data="00005d52"/>
 				<value name="AffinityPriorityKey" type="dword" data="00005d41"/>
 				<value name="Multi.MoveLeft" type="dword" data="00125b25"/>
