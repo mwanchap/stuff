@@ -18,7 +18,7 @@ Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
 #$host.PrivateData.ErrorBackgroundColor = "White"
 #Set-PSReadlineOption -ResetTokenColors
 Set-Alias vim 'C:\Program Files (x86)\Vim\vim80\gvim.exe'
-Set-Alias csi 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\Roslyn\csi.exe'
+Set-Alias csi 'C:\Program Files (x86)\Microsoft Visual Studio\2017\*\MSBuild\15.0\Bin\Roslyn\csi.exe'
 Set-Alias sf 'force'
 Set-Alias sfdx 'C:\Program Files\Salesforce CLI\bin\sfdx.cmd'
 Set-Alias stree "C:\Program Files (x86)\Atlassian\Sourcetree\SourceTree.exe"
