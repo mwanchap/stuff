@@ -4,7 +4,7 @@
 [core]
 	autocrlf = true
 	excludesfile = C:\\configs\\.gitignore_global
-	editor = notepad
+	editor = vim
 [diff]
     tool = kdiff3
 [difftool]
