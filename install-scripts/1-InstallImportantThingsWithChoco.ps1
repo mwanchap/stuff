@@ -10,7 +10,7 @@
 choco install googlechrome vim git autohotkey.install ditto alt-tab-terminator keypirinha -y
 
 #setup redirected configs for vim, git and PS
-"source C:\configs\.vimrc" | out-file ~\.vimrc -NoNewline -Encoding utf8;
+"source C:\\configs\\.vimrc" | out-file ~\.vimrc -NoNewline -Encoding utf8;
 "[include]`n    path = C:\\configs\\.gitconfig" | out-file ~\.gitconfig -NoNewline -Encoding utf8;
 ". C:\configs\Microsoft.PowerShell_profile.ps1" | out-file $profile -NoNewline -Encoding utf8;
 
