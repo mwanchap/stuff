@@ -219,3 +219,6 @@ vendor/
 
 # database project cache file, shouldn't be in the project directory anyway
 *.jfm
+
+# orig files from git merge / kdiff
+*.orig
