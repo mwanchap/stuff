@@ -13,7 +13,7 @@ if (Test-Path "$homedir\ShareX")
 
 #powershell stuff
 Install-PackageProvider -Name NuGet -Force
-Install-Module "AzureRM","AzureAD","ImportExcel", "VSTeam" -Force
+Install-Module "AzureRM","AzureAD","ImportExcel", "VSTeam", "sqlserver" -Force
 Update-Help
 
 #python stuff
