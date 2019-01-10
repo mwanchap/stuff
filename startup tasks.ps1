@@ -24,14 +24,10 @@ Write-Heading "Clearing scratch dir..."
 Remove-Item C:\scratch\* -Recurse -Force
 
 #remove outlook reply sig
-#TODO: this might not work on future installs.  perhaps find the correct subkey where Account Name == email addy
 Write-Heading "Removing outlook reply sig..."
-$settingsLocation = "HKCU:\Software\Microsoft\Office\16.0\Outlook\Profiles\matt.wanchap\9375CFF0413111d3B88A00104B2A6676\00000002\"
-
-if(Test-Path $settingsLocation)
-{
-    Set-ItemProperty -Path $settingsLocation -Name "Reply-Forward Signature" -Value "(none)"
-}
+$profilesLocation = "HKCU:\Software\Microsoft\Office\16.0\Outlook\Profiles\"
+$settings = (Get-ChildItem -Path $profilesLocation -Recurse | where {$_.GetValue("Account Name") -eq "Matt.Wanchap@cpal.com.au"})
+$settings | Set-ItemProperty -Name "Reply-Forward Signature" -Value "(none)"
 
 #kill exclaimer
 Write-Heading "Killing exclaimer..."
