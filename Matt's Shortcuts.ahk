@@ -28,14 +28,6 @@ $Escape::SetCapsLockState Off
     return
 }
 
-;#z::
-;{
-;    Run "C:\Program Files (x86)\Vim\vim80\gvim.exe"
-;    Sleep 200
-;    WinActivate, % "[No Name] - GVIM"
-;    return
-;}
-
 ;alt-tab replacement
 ;`::
 ;{
@@ -105,6 +97,14 @@ Launch_App2::Send !#k
     return
 }
 
+!#x::
+{
+    ; toggle skype mute
+    Send #{F4}
+    return
+}
+
+
 WindowSwitch(appName)
 {
     if WinExist("ahk_exe " . appName)
@@ -129,7 +129,7 @@ return
 XButton1::
 DllCall("SystemParametersInfo", Int,113, Int,0, UInt,5, Int,2)
 KeyWait, XButton1
-DllCall("SystemParametersInfo", Int,113, Int,0, UInt,10, Int,2)
+DllCall("SystemParametersInfo", Int,113, Int,0, UInt,15, Int,2)
 return
 
 /*
