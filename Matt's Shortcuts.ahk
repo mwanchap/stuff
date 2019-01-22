@@ -97,7 +97,7 @@ Launch_App2::Send !#k
     return
 }
 
-!#x::
+#z::
 {
     ; toggle skype mute
     Send #{F4}
