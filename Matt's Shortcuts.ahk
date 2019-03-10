@@ -127,8 +127,12 @@ return
 
 
 XButton1::
-DllCall("SystemParametersInfo", Int,113, Int,0, UInt,5, Int,2)
+DllCall("SystemParametersInfo", Int,113, Int,0, UInt,3, Int,2)
 KeyWait, XButton1
+DllCall("SystemParametersInfo", Int,113, Int,0, UInt,10, Int,2)
+return
+
+XButton2::
 DllCall("SystemParametersInfo", Int,113, Int,0, UInt,15, Int,2)
 return
 
