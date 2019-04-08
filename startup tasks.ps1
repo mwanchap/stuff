@@ -11,6 +11,7 @@ Write-Heading "Running tasks..."
 $tasks = @(
     [pscustomobject]@{name="ahk shortcuts"; exec = "C:\configs\Matt's Shortcuts.ahk"},
     [pscustomobject]@{name="easywindowdrag"; exec = "C:\configs\EasyWindowDrag_(KDE).ahk"}
+    [pscustomobject]@{name="pomodone"; exec = "$env:LOCALAPPDATA\PomoDoneApp\PomoDoneApp.exe"}
 );
 
 foreach ($task in $tasks)
