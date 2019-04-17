@@ -114,6 +114,11 @@ WindowSwitch(appName)
     return
 }
 
+^Ins::
+{
+    Send ^c
+}
+
 :*:ssf::
 (
 SELECT	*
