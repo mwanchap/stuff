@@ -13,7 +13,7 @@ choco install vscode vscode-csharp vscode-icons vscode-powershell -y
 
 # vscode stuff, have to loop bc it can only install one at a time
 ("formulahendry.code-runner", "ms-python.python", "ms-vscode.PowerShell",
-"vscodevim.vim") | % {
+"vscodevim.vim", "tranhl.find-then-jump") | % {
     code --install-extension $_
 }
 
