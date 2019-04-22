@@ -31,7 +31,13 @@
         },
         {
             "before":["f"],
-            "after":["<leader>", "<leader>", "s"]
+            // "after":["<leader>", "<leader>", "s"]
+            "after":[],
+            "commands":[
+                {
+                    "command":"findThenJump.initiate"
+                }
+            ]
         }
         //{
         //    "before":["u"],
@@ -59,5 +65,9 @@
     "window.titleBarStyle": "custom",
     "explorer.confirmDelete": false,
     "workbench.colorTheme": "Visual Studio Light",
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.activityBar.visible": true,
+    "editor.minimap.enabled": false,
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
 }
