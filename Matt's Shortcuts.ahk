@@ -76,12 +76,20 @@ ScrollLock::
 Launch_App2::Send !#k
 
 ; replacement for alt-tab shortcut - opens "switch to" module
-`::
+; the $ symbol means that it can't be triggered from the ` hotkey below
+$`::
 {
     Send !#k
     Sleep 10
     Send Switch To`t
     return
+}
+
+; sometimes we still need to use the grave character, like in Powershell. Doesn't trigger the above
+; due to the $ character
+^+`::
+{
+    Send {``}
 }
 
 !#n::WindowSwitch("gvim.exe")
