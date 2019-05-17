@@ -122,6 +122,11 @@ function SFUpdate
     force query "select Id FROM $Type WHERE $Where" --format:csv | ConvertFrom-Csv | % {force record update $Type $_.Id $Update }
 }
 
+function SFRecTypes
+{
+    force describe -t=sobject -n="$($args[0])" | convertfrom-json | Select-Object -ExpandProperty recordTypeInfos
+}
+
 # Chocolatey profile
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
