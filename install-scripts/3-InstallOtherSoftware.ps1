@@ -3,7 +3,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git $env:userprofile\vimfiles\
 vim +PluginInstall +qall;
 
 #other software
-choco install googlechrome.canary nodejs.install sysinternals 7zip.install firefox vlc conemu windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree kdiff3 microsoftazurestorageexplorer rdcman qmmp postman sharex winscp force-cli rescuetime ilspy grepwin paint.net -y
+choco install googlechrome.canary nodejs.install sysinternals 7zip.install firefox vlc conemu windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree kdiff3 microsoftazurestorageexplorer rdcman qmmp postman sharex winscp force-cli rescuetime ilspy grepwin paint.net csvfileview -y
 
 #sharex hotkey
 if (Test-Path "$homedir\ShareX")
