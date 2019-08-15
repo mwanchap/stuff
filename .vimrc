@@ -89,7 +89,11 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 
+"Most Recently Used
 :command MRU browse oldfiles
+"
+"doesn't make much sense - it's the alias for Invoke-Item in Powershell, used like "ii ./", just to keep the name the same
+:command II !start explorer /select,%:p 
 
 "plugins stuff
 

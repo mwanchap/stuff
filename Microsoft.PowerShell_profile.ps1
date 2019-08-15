@@ -38,7 +38,7 @@ write-host "Scripts are in " -nonewline
 write-host "`$scriptdir" -ForegroundColor "Green"  -nonewline
 write-host ", other stuff goes in " -nonewline
 write-host "`$homedir" -ForegroundColor "Green"
-Set-Location "C:\"
+
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 
 function prompt
@@ -53,13 +53,14 @@ function prompt
 
 function search
 {
+    #todo: need a way to exclude binary files
     param
     (
         [string]$filePattern="*.*",
         [string]$searchStr
     )
 
-    get-childitem $filePattern -Recurse | sls $searchStr
+    get-childitem $filePattern -Recurse | sls $searchStr -Context 1,1
 }
 
 function Obliterate
