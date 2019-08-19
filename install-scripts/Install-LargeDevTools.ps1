@@ -1,10 +1,11 @@
 #visual studio stuff
-choco install visualstudio2017professional visualstudio2017-workload-netweb visualstudio2017-workload-azure netfx-4.7.2-devpack vsvim codemaid sql-server-management-studio urlrewrite -y
+choco install visualstudio2017professional visualstudio2017-workload-netweb visualstudio2017-workload-azure netfx-4.7.2-devpack urlrewrite sql-server-express azure-data-studio -y
 
 #vscode stuff
 choco install vscode vscode-csharp vscode-icons vscode-powershell -y
 
 #manual VS config stuff
+    #choco install vsvim -y
     #install these extensions
         #relative number
         #editor guidelines (Paul Harrington's one)
