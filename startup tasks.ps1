@@ -36,7 +36,7 @@ Get-Process exsync -ErrorAction SilentlyContinue | Stop-Process;
 
 #check for outdated packages
 Write-Heading "Checking for outdated packages..."
-. choco upgrade all
+. choco upgrade all -y
 
 Write-Heading "Done"
 Read-Host "Press return to finish"
