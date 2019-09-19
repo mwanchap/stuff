@@ -97,6 +97,7 @@ $`::
 !#h::WindowSwitch("chrome.exe")
 !#o::WindowSwitch("Code.exe")
 !#i::WindowSwitch("firefox.exe")
+!#j::WindowSwitch("WindowsTerminal.exe")
 !#y::
 {
     ;opens skype search

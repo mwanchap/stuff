@@ -113,7 +113,7 @@ function SFUserID
 
 function SFQuery
 {
-    force query "SELECT Id FROM $($args[0])" --format:csv | ConvertFrom-Csv
+    force query --format json $args[0] | ConvertFrom-Json
 }
 
 function SFUpdate
