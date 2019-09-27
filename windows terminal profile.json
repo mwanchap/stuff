@@ -1,4 +1,5 @@
 {
+    "$schema": "https://aka.ms/terminal-profiles-schema",
     "globals" : 
     {
         "alwaysShowTabs" : true,
@@ -228,7 +229,7 @@
         ],
         "requestedTheme" : "system",
         "showTabsInTitlebar" : true,
-        "showTerminalTitleInTitlebar" : true,
+        "showTerminalTitleInTitlebar" : false,
         "wordDelimiters" : " ./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}~?\u2502"
     },
     "profiles" : 
@@ -253,14 +254,14 @@
             "useAcrylic" : true
         },
         {
-            "acrylicOpacity" : 0.9,
+            "acrylicOpacity" : 0.75,
             "background" : "#FAFAFA",
             "closeOnExit" : true,
             "colorScheme" : "Matt's colour scheme",
             "commandline" : "powershell.exe",
             "cursorColor" : "#000000",
             "cursorShape" : "bar",
-            "fontFace" : "Consolas",
+            "fontFace" : "Cascadia Code",
             "fontSize" : 11,
             "guid" : "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
             "historySize" : 9001,
@@ -307,6 +308,18 @@
             "snapOnInput" : true,
             "startingDirectory" : "%USERPROFILE%",
             "useAcrylic" : true
+        },
+        {
+            "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+            "hidden": false,
+            "name": "PowerShell Core",
+            "source": "Windows.Terminal.PowershellCore"
+        },
+        {
+            "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+            "hidden": false,
+            "name": "Ubuntu",
+            "source": "Windows.Terminal.Wsl"
         }
     ],
     "schemes" : 
@@ -444,14 +457,14 @@
             "brightBlack" : "#4F525D",
             "brightBlue" : "#61AFEF",
             "brightCyan" : "#56B5C1",
-            "brightGreen" : "#98C379",
+            "brightGreen" : "#50A14F",
             "brightPurple" : "#C577DD",
             "brightRed" : "#DF6C75",
             "brightWhite" : "#999999",
             "brightYellow" : "#DD8A00",
             "cyan" : "#0997B3",
             "foreground" : "#383A42",
-            "green" : "#50A14F",
+            "green" : "#8AB06E",
             "name" : "Matt's colour scheme",
             "purple" : "#A626A4",
             "red" : "#E45649",
