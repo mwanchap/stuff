@@ -35,7 +35,7 @@ set smartcase
 set relativenumber
 set number
 set tabstop=4 shiftwidth=4 expandtab
-set guifont=Fira_Code:h10
+set guifont=Cascadia_Code:h10
 set enc=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8
