@@ -3,7 +3,6 @@
 	email = matt.wanchap@cpal.com.au
 [core]
 	autocrlf = true
-	excludesfile = $HOME\\stuff\\.gitignore_global
 	editor = vim
 [diff]
     tool = kdiff3

@@ -1,2 +1,0 @@
-powershell.exe
-set "PATH=%ConEmuDir%\..\Git\usr\bin;%PATH%" & "%ConEmuDir%\..\Git\git-cmd.exe" --no-cd --command=%ConEmuBaseDirShort%\conemu-msys2-64.exe /usr/bin/bash.exe -l -i -new_console:s
