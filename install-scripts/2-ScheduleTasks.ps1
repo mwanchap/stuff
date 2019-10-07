@@ -35,8 +35,7 @@ function ScheduleStartupTask
     Register-ScheduledTask -TaskName $TaskName -InputObject $newTask
 }
 
-ScheduleStartupTask -TaskName "startup tasks" -TaskDescription "Runs startup tasks script" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". 'C:\configs\startup tasks.ps1'""" -RunLevel Highest;
-ScheduleStartupTask -TaskName "run conemu" -TaskDescription "Runs conemu as non-admin" -ExecPath "C:\Program Files\ConEmu\ConEmu64.exe" -RunLevel Limited;
-ScheduleStartupTask -TaskName "continue setup - install other things 1" -TaskDescription "runs the next steps in parallel" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". 'C:\configs\install-scripts\3-InstallOtherSoftware.ps1'""" -RunLevel Highest;
-ScheduleStartupTask -TaskName "continue setup - install other things 2" -TaskDescription "runs the next steps in parallel" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". 'C:\configs\install-scripts\4-InstallIISFeatures.ps1'""" -RunLevel Highest;
+ScheduleStartupTask -TaskName "startup tasks" -TaskDescription "Runs startup tasks script" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". '~\stuff\startup tasks.ps1'""" -RunLevel Highest;
+ScheduleStartupTask -TaskName "continue setup - install other things 1" -TaskDescription "runs the next steps in parallel" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". '~\stuff\install-scripts\3-InstallOtherSoftware.ps1'""" -RunLevel Highest;
+ScheduleStartupTask -TaskName "continue setup - install other things 2" -TaskDescription "runs the next steps in parallel" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". '~\stuff\install-scripts\4-InstallIISFeatures.ps1'""" -RunLevel Highest;
 
