@@ -3,12 +3,12 @@ git clone https://github.com/VundleVim/Vundle.vim.git $env:userprofile\vimfiles\
 vim +PluginInstall +qall;
 
 #other software
-choco install googlechrome.canary nodejs.install sysinternals 7zip.install firefox vlc conemu windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree kdiff3 microsoftazurestorageexplorer rdcman qmmp postman sharex winscp force-cli rescuetime ilspy grepwin paint.net csvfileview firacode -y
+choco install googlechrome.canary nodejs.install sysinternals 7zip.install firefox vlc windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree kdiff3 microsoftazurestorageexplorer rdcman qmmp postman sharex winscp force-cli rescuetime ilspy grepwin paint.net csvfileview firacode -y
 
 #sharex hotkey
 if (Test-Path "$homedir\ShareX")
 {
-    Copy-Item "C:\configs\ShareX\*.*" -Destination "$homedir\ShareX\"
+    Copy-Item "~\stuff\ShareX\*.*" -Destination "$homedir\ShareX\"
 }
 
 #powershell stuff

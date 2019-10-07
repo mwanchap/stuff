@@ -18,6 +18,6 @@ choco install vscode vscode-csharp vscode-icons vscode-powershell -y
     code --install-extension $_
 }
 
-Copy-Item "C:\configs\vscode\settings.json" -Destination "$env:APPDATA\Code\User\settings.json" -Force
+Copy-Item "~\stuff\vscode\settings.json" -Destination "$env:APPDATA\Code\User\settings.json" -Force
 
 
