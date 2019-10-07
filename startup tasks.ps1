@@ -35,7 +35,7 @@ Write-Heading "Killing exclaimer..."
 Get-Process exsync -ErrorAction SilentlyContinue | Stop-Process;
 
 Write-Heading "Copying spotlight images as wallpapers..."
-. ".\Scripts\Windows Spotlight Wallpapers.ps1"
+& "~\stuff\Scripts\Windows Spotlight Wallpapers.ps1"
 
 #check for outdated packages
 Write-Heading "Checking for outdated packages..."
