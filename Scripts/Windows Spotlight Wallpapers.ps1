@@ -5,12 +5,11 @@ New-Item $location -Type Directory -ErrorAction SilentlyContinue
 
 # grab spotlight images that have the right size and aspect ratio, then copy + rename them
 Get-ChildItem $spotlightImages |
-    Where-Object Length -gt 300000 | 
+    Where-Object Length -gt 150000 | 
     Foreach-Object {
         $image = [System.Drawing.Image]::FromFile($_.FullName);
-        $ratio = $image.Width / $image.Height
-        $image.Dispose()
-        if ($ratio -gt 1) {
+        if ($image.Width -eq 1920) {
             Copy-Item $_.FullName -Destination "$location\$($_.Name).jpg"
         }
+        $image.Dispose()
     }
