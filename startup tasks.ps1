@@ -32,7 +32,12 @@ $settings | Set-ItemProperty -Name "Reply-Forward Signature" -Value "(none)"
 
 #kill exclaimer
 Write-Heading "Killing exclaimer..."
-Get-Process exsync -ErrorAction SilentlyContinue | Stop-Process;
+Get-Process exsync -ErrorAction SilentlyContinue | Stop-Process -Force;
+
+#kill osquery
+Write-Heading "Killing osquery..."
+Get-Service osqueryd -ErrorAction SilentlyContinue | Stop-Service
+Get-Process osqueryd -ErrorAction SilentlyContinue | Stop-Process -Force
 
 Write-Heading "Copying spotlight images as wallpapers..."
 & "~\stuff\Scripts\Windows Spotlight Wallpapers.ps1"
