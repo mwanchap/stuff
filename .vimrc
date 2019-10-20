@@ -13,6 +13,7 @@ Plugin 'OrangeT/vim-csharp'
 Plugin 'PProvost/vim-ps1'
 Plugin 'tpope/vim-surround'
 Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'kchmck/vim-coffee-script'
 
 call vundle#end()
 filetype plugin indent on
@@ -102,7 +103,7 @@ map f <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 
 "papercolor
-set background=light
+set background=dark
 colorscheme PaperColor
 
 set diffexpr=MyDiff()
