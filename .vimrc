@@ -43,6 +43,7 @@ set fileencodings=ucs-bom,utf8
 set textwidth=0
 set shell=powershell\ -noprofile
 set shellcmdflag=-command
+set shellxquote="
 set splitbelow
 set splitright
 
@@ -95,6 +96,9 @@ set guioptions-=r  "remove right-hand scroll bar
 "
 "doesn't make much sense - it's the alias for Invoke-Item in Powershell, used like "ii ./", just to keep the name the same
 :command II !start explorer /select,%:p 
+
+"opens current file as hexadecimal
+:command HEX %!xxd -g 1
 
 "plugins stuff
 
