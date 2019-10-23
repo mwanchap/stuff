@@ -7,7 +7,7 @@
 }
 
 #install most useful stuff
-choco install googlechrome vim git autohotkey.install ditto alt-tab-terminator keypirinha -y
+choco install googlechrome vim git autohotkey.install ditto keypirinha -y
 
 # setup redirected config for vim
 "source ~\\stuff\\.vimrc" | out-file ~\.vimrc -NoNewline -Encoding utf8;
@@ -21,10 +21,3 @@ $escHome = $env:HOME.Replace('\',"\\");
 
 # redirected powershell profile
 ". ~\stuff\Microsoft.PowerShell_profile.ps1" | out-file $profile -NoNewline -Encoding utf8;
-
-#alt-tab terminator hotkey
-$attRegPath = "HKCU:\Software\Alexander Avdonin\Alt-Tab Terminator\3.0\"
-if (Test-Path $attRegPath)
-{
-    Set-ItemProperty -Path $attRegPath -Name "HkCustom1" -Value 192
-}
