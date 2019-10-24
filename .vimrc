@@ -46,6 +46,7 @@ set shellcmdflag=-command
 set shellxquote="
 set splitbelow
 set splitright
+set diffopt=internal,filler,vertical
 
 nnoremap ? /\v
 vnoremap ? /\v
