@@ -1,42 +1,13 @@
 Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
 
-#Import-Module VSTeam
-#Add-VSTeamAccount -Profile vsts -Drive vsteam
-#New-PSDrive -Name vsteam -PSProvider SHiPS -Root 'VSTeam#VSTeamAccount'
-
-#$host.UI.RawUI.ForegroundColor = "DarkGray"
-#$host.UI.RawUI.BackgroundColor = "White"
-#$host.PrivateData.VerboseForegroundColor = "DarkYellow"
-#$host.PrivateData.DebugForegroundColor = "DarkYellow"
-#$host.PrivateData.ProgressForegroundColor = "DarkYellow"
-#$host.PrivateData.WarningForegroundColor = "DarkYellow"
-#$host.PrivateData.ErrorForegroundColor = "Red"
-#$host.PrivateData.VerboseBackgroundColor = "White"
-#$host.PrivateData.DebugBackgroundColor = "White"
-#$host.PrivateData.ProgressBackgroundColor = "White"
-#$host.PrivateData.WarningBackgroundColor = "White"
-#$host.PrivateData.ErrorBackgroundColor = "White"
-#Set-PSReadlineOption -ResetTokenColors
+# ALIASES
 Set-Alias csi "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Roslyn\csi.exe"
+Set-Alias hex "C:\Program Files\HxD\HxD.exe"
 Set-Alias sf 'force'
 Set-Alias sfdx 'C:\Program Files\Salesforce CLI\bin\sfdx.cmd'
 Set-Alias stree "C:\Program Files (x86)\Atlassian\Sourcetree\SourceTree.exe"
-#write-host "To log in to Azure:"
-#write-host "Import-Module AzureRM" -ForegroundColor "Yellow"
-#write-host "Login-AzureRMAccount" -ForegroundColor "Yellow"
-#write ""
-#write-host "To connect to a server:"
-#write-host "Import-Module WebAdministration" -ForegroundColor "Yellow"
-#write-host "Get-Credential" -ForegroundColor "Yellow"
-#write-host "Enter-PSSession" -ForegroundColor "Yellow"
-#write-host "Or to connect to a server, " -ForegroundColor "Yellow"
-$scriptdir = "$env:OneDrive\Scripts\Powershell"
-$homedir = "\\svwhaefl02\homedrives$\Matt.Wanchap\Documents"
+
 Clear-Host
-write-host "Scripts are in " -nonewline
-write-host "`$scriptdir" -ForegroundColor "Green"  -nonewline
-write-host ", other stuff goes in " -nonewline
-write-host "`$homedir" -ForegroundColor "Green"
 
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
 
