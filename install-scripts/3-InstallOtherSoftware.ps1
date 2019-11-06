@@ -1,3 +1,9 @@
+if([IntPtr]::Size -eq 4)
+{
+    write-error "You're using a 32-bit (x86) powershell instance, which is going to break things later on. Ensure you're running the 64-bit version!"
+    return
+}
+
 #install vim plugins
 git clone https://github.com/VundleVim/Vundle.vim.git $env:userprofile\vimfiles\bundle\Vundle.vim;
 vim +PluginInstall +qall;
@@ -13,7 +19,7 @@ if (Test-Path "$homedir\ShareX")
 
 #powershell stuff
 Install-PackageProvider -Name NuGet -Force
-Install-Module "AzureRM","AzureAD","ImportExcel", "VSTeam", "sqlserver" -Force
+Install-Module "AzureRM","AzureAD","ImportExcel","sqlserver" -Force
 Update-Help
 
 #python stuff

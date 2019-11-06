@@ -1,5 +1,11 @@
+if([IntPtr]::Size -eq 4)
+{
+    write-error "You're using a 32-bit (x86) powershell instance, which is going to break things later on. Ensure you're running the 64-bit version!"
+    return
+}
+
 #visual studio stuff
-choco install visualstudio2017professional visualstudio2017-workload-netweb visualstudio2017-workload-azure netfx-4.7.2-devpack urlrewrite sql-server-express azure-data-studio -y
+choco install visualstudio2019professional visualstudio2019-workload-netweb visualstudio2019-workload-azure netfx-4.7.2-devpack urlrewrite sql-server-express azure-data-studio -y
 
 #vscode stuff
 choco install vscode vscode-csharp vscode-icons vscode-powershell -y
