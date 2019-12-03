@@ -67,12 +67,6 @@ ScrollLock::
     }
 }
 
-;prevents some programs like vim and notepad catching the numpad minus key for consoles
-;NumpadSub::Send #{NumpadSub}
-;NumpadAdd::Send ^#k
-;^AppsKey::Send #{NumpadSub}
-;!AppsKey::Send ^#k
-;AppsKey::Send {AppsKey}
 Launch_App2::Send !#k
 
 ; replacement for alt-tab shortcut - opens "switch to" module
@@ -149,82 +143,3 @@ return
 XButton2::
 DllCall("SystemParametersInfo", Int,113, Int,0, UInt,15, Int,2)
 return
-
-/*
-~Break::
-Send #{F4}
-KeyWait, Break
-Send #{F4}
-return
-*/
-
-;media keys from http://www.instructables.com/id/Keyboard-Media-Controls-for-Windows-with-AutoHotKe/step2/Writing-the-script/
-/*
-^!Ins::
-	Send {Media_Play_Pause}
-return
-
-^!End::
-	Send {Media_Stop}
-return
-
-^!PgUp::
-	Send {Media_Prev}
-return
-
-^!PgDn::
-	Send {Media_Next}
-return
-*/
-
-;^PrintScreen::
-;	Run "C:\Windows\System32\SnippingTool.exe"
-;	Sleep 500
-;	WinActivate
-;	Send ^n
-;return
-
-;Vim-style outlook shortcuts
-/*
-#IfWinActive Inbox - Matt.Wanchap@cpal.com.au - Outlook
-
-j::
-{
-    SendInput ^6
-    SendInput ^1
-    SendInput {Down}
-    return
-}
-k::
-{
-    SendInput ^6
-    SendInput ^1
-    SendInput {Up}
-    return
-}
-d::SendInput {Delete}
-
-;reply
-r::
-{
-    SendInput ^r
-    Sleep 1000
-    SendInput #j
-}
-
-;move
-m::SendInput ^+v
-
-;forward
-f::SendInput ^f
-
-;search
-/::
-{
-    SendInput ^e
-    Sleep 500
-    SendInput #j
-}
-
-#IfWinActive
-*/
