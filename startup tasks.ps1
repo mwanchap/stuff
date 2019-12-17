@@ -11,8 +11,6 @@ Write-Heading "Running tasks..."
 $tasks = @(
     [pscustomobject]@{name="ahk shortcuts"; exec = "~\stuff\Matt's Shortcuts.ahk"},
     [pscustomobject]@{name="easywindowdrag"; exec = "~\stuff\EasyWindowDrag_(KDE).ahk"}
-    [pscustomobject]@{name="easywindowdrag"; exec = "~\stuff\clock.ahk"}
-    [pscustomobject]@{name="easywindowdrag"; exec = "~\stuff\MouseWrapper.ahk"}
     [pscustomobject]@{name="pomodone"; exec = "$env:LOCALAPPDATA\PomoDoneApp\PomoDoneApp.exe"}
 );
 
