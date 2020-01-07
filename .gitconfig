@@ -3,7 +3,7 @@
 	email = matt.wanchap@cpal.com.au
 [core]
 	autocrlf = true
-	editor = "C:/tools/vim/vim81/gvim.exe"
+	editor = "C:/tools/vim/vim82/gvim.exe"
 [diff]
     tool = kdiff3
 [difftool]

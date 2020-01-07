@@ -99,7 +99,7 @@ set guioptions-=r  "remove right-hand scroll bar
 :command II !start explorer /select,%:p 
 
 "opens current file as hexadecimal
-:command HEX %!xxd -g 1
+:command HEX !start "C:\Program Files\HxD\HxD.exe" "%:p"
 
 "plugins stuff
 
