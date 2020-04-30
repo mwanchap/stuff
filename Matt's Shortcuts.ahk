@@ -1,3 +1,15 @@
+AppsKey::Send {AppsKey}
+AppsKey & 1::Send #{1}
+AppsKey & 2::Send #{2}
+AppsKey & 3::Send #{3}
+AppsKey & 4::Send #{4}
+AppsKey & 5::Send #{5}
+AppsKey & 6::Send #{6}
+AppsKey & 7::Send #{7}
+AppsKey & 8::Send #{8}
+AppsKey & 9::Send #{9}
+AppsKey & 0::Send #{0}
+
 ;old 5-button mouse macros, less useful now, commented out
 ;XButton2 & LButton::SendInput ^c
 ;XButton2 & RButton::SendInput ^v
@@ -18,80 +30,6 @@
 $CapsLock::SendInput {Escape}
 $Escape::SetCapsLockState Off
 
-;launching various programs
-
-#s::
-{
-    Run "C:\Program Files\grepWin\grepWin.exe"
-    Sleep 200
-    WinActivate
-    return
-}
-
-;alt-tab replacement
-;`::
-;{
-;    If (A_PriorHotKey = A_ThisHotKey and A_TimeSincePriorHotkey < 250)
-;    {
-;        Send {Alt down}{Tab}
-;        return
-;    }
-;    Else
-;    {
-;        SendInput !{Tab}
-;        return
-;    }
-;}
-
-desktop := 1
-
-ScrollLock::
-{
-    desktops := 2
-    if(desktop < desktops)
-    {
-        Send ^#{Right}
-        desktop++
-        return
-    }
-    else
-    {
-        while(desktop > 1)
-        {
-            Send ^#{Left}
-            Sleep 100
-            desktop--
-        }
-
-        return
-    }
-}
-
-Launch_App2::Send !#k
-
-; replacement for alt-tab shortcut - opens "switch to" module
-; the $ symbol means that it can't be triggered from the ` hotkey below
-$`::
-{
-    Send !#k
-    Sleep 10
-    Send Switch To`t
-    return
-}
-
-; sometimes we still need to use the grave character, like in Powershell. Doesn't trigger the above
-; due to the $ character
-^+`::
-{
-    Send {``}
-}
-
-!#n::WindowSwitch("gvim.exe")
-!#m::WindowSwitch("devenv.exe")
-!#h::WindowSwitch("chrome.exe")
-!#o::WindowSwitch("Code.exe")
-!#i::WindowSwitch("firefox.exe")
-!#j::WindowSwitch("WindowsTerminal.exe")
 !#y::
 {
     ;opens skype search
@@ -107,15 +45,6 @@ $`::
     return
 }
 
-
-WindowSwitch(appName)
-{
-    if WinExist("ahk_exe " . appName)
-    {
-        WinActivate, ahk_exe %appName%
-    }
-    return
-}
 
 ^Ins::
 {
