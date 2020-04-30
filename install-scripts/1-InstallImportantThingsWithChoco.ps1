@@ -7,7 +7,7 @@
 }
 
 #install most useful stuff
-choco install googlechrome vim git autohotkey.install ditto keypirinha -y
+choco install googlechrome vim git autohotkey.install -y
 
 # setup redirected config for vim
 "source ~\\stuff\\.vimrc" | out-file ~\.vimrc -NoNewline -Encoding utf8;
