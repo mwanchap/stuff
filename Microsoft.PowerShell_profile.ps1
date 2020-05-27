@@ -1,7 +1,7 @@
 Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
 
 # ALIASES
-Set-Alias csi "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\Roslyn\csi.exe"
+Set-Alias csi "C:\Program Files (x86)\Microsoft Visual Studio\2019\**\MSBuild\Current\Bin\Roslyn\csi.exe"
 Set-Alias hex "C:\Program Files\HxD\HxD.exe"
 Set-Alias sf 'force'
 Set-Alias sfdx 'C:\Program Files\Salesforce CLI\bin\sfdx.cmd'
