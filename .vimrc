@@ -19,24 +19,23 @@ call vundle#end()
 filetype plugin indent on
 "end of stuff required for vundle
 
-source $VIMRUNTIME/vimrc_example.vim
-source $VIMRUNTIME/mswin.vim
+"source $VIMRUNTIME/vimrc_example.vim
+"source $VIMRUNTIME/mswin.vim
 
 "delete autocmds set from above files
-autocmd! vimrcEx FileType text
+"autocmd! vimrcEx FileType text
 
 behave mswin
-set dir=%TMP%
-set backupdir=%TMP%
+set dir=$TEMP
+set backupdir=$TEMP
 set undofile
-set undodir=%TMP%
-set lines=60 columns=150
+set undodir=$TEMP
 set ignorecase
 set smartcase
 set relativenumber
 set number
 set tabstop=4 shiftwidth=4 expandtab
-set guifont=Cascadia_Code:h10
+"set guifont=Cascadia_Code:h10
 set enc=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8

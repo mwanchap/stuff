@@ -2,8 +2,8 @@
 	name = Matt Wanchap
 	email = matt.wanchap@cpal.com.au
 [core]
-	autocrlf = true
-	editor = "C:/tools/vim/vim82/gvim.exe"
+	autocrlf = input
+	editor = nvim
 [diff]
     tool = kdiff3
 [difftool]
