@@ -57,35 +57,29 @@ set autoindent
 set cursorline
 set scrolloff=3
 
+" make sure to set leader BEFORE mapping things to it
+nnoremap <SPACE> <Nop>
+let mapleader=" "
+
 "this stuff from http://stevelosh.com/blog/2010/09/coming-home-to-vim/
-"nnoremap <up> <nop>
-"nnoremap <down> <nop>
-"nnoremap <left> <nop>
-"nnoremap <right> <nop>
-"inoremap <up> <nop>
-"inoremap <down> <nop>
-"inoremap <left> <nop>
-"inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 nnoremap ; :
-"inoremap jj <ESC>
-nnoremap <Esc><Esc> :<C-u>nohlsearch<CR>
+nnoremap <Esc><Esc> :nohlsearch<CR>
 nnoremap <PageUp> <C-u>
 nnoremap <PageDown> <C-d>
 inoremap <Esc> <Esc>`^
 inoremap <c-space> <c-n>
 
-"set up leader
-nnoremap <SPACE> <Nop>
-let mapleader=" "
+" yank and paste from the clipboard because C-Insert can't be mapped for some idiotic reason
+nnoremap <S-Insert> "+P
+nnoremap <leader>P "+P
+nnoremap <leader>p "+p
+nnoremap <leader>y "+yy
+vnoremap <leader>y "+y
+vnoremap <leader>Y "+Y
 
 :se autochdir   "auto-set current working directory to current file's directory
-
-"bad ideas regarding copy/paste that will be left for posterity
-"nnoremap yy "+Y
-"nnoremap P "+P
-"set clipboard=unnamed
 
 set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
