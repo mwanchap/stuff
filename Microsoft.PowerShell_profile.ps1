@@ -1,11 +1,12 @@
+$env:PSModulePath =  $env:PSModulePath.Replace('\\svwhaefl02\homedrives$\matt.wanchap\Documents\WindowsPowerShell\Modules;','')
+$env:PSModulePath =  $env:PSModulePath.Replace('\\svwhaefl02\homedrives$\matt.wanchap\Documents\PowerShell\Modules;','')
+
 Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
 
 # ALIASES
 Set-Alias csi "C:\Program Files (x86)\Microsoft Visual Studio\2019\**\MSBuild\Current\Bin\Roslyn\csi.exe"
 Set-Alias hex "C:\Program Files\HxD\HxD.exe"
-Set-Alias sf 'force'
 Set-Alias sfdx 'C:\Program Files\Salesforce CLI\bin\sfdx.cmd'
-Set-Alias stree "C:\Program Files (x86)\Atlassian\Sourcetree\SourceTree.exe"
 
 Clear-Host
 
