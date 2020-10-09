@@ -73,11 +73,10 @@ inoremap <c-space> <c-n>
 
 " yank and paste from the clipboard because C-Insert can't be mapped for some idiotic reason
 nnoremap <S-Insert> "+P
-nnoremap <leader>P "+P
-nnoremap <leader>p "+p
+nnoremap <leader>p "+P
 nnoremap <leader>y "+yy
+vnoremap <leader>p "+P
 vnoremap <leader>y "+y
-vnoremap <leader>Y "+Y
 
 :se autochdir   "auto-set current working directory to current file's directory
 
