@@ -21,22 +21,7 @@ foreach ($task in $tasks)
 
 #clear scratch dir
 Write-Heading "Clearing scratch dir..."
-Remove-Item C:\scratch\* -Recurse -Force
-
-#remove outlook reply sig
-Write-Heading "Removing outlook reply sig..."
-$profilesLocation = "HKCU:\Software\Microsoft\Office\16.0\Outlook\Profiles\"
-$settings = (Get-ChildItem -Path $profilesLocation -Recurse | where {$_.GetValue("Account Name") -eq "Matt.Wanchap@cpal.com.au"})
-$settings | Set-ItemProperty -Name "Reply-Forward Signature" -Value "(none)"
-
-#kill exclaimer
-Write-Heading "Killing exclaimer..."
-Get-Process exsync -ErrorAction SilentlyContinue | Stop-Process -Force;
-
-#kill osquery
-Write-Heading "Killing osquery..."
-Get-Service osqueryd -ErrorAction SilentlyContinue | Stop-Service
-Get-Process osqueryd -ErrorAction SilentlyContinue | Stop-Process -Force
+Remove-Item ~\scratch\* -Recurse -Force
 
 Write-Heading "Copying spotlight images as wallpapers..."
 & "~\stuff\Scripts\Windows Spotlight Wallpapers.ps1"

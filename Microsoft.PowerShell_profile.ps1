@@ -1,5 +1,5 @@
-$env:PSModulePath =  $env:PSModulePath.Replace('\\svwhaefl02\homedrives$\matt.wanchap\Documents\WindowsPowerShell\Modules;','')
-$env:PSModulePath =  $env:PSModulePath.Replace('\\svwhaefl02\homedrives$\matt.wanchap\Documents\PowerShell\Modules;','')
+$env:PSModulePath =  $env:PSModulePath.Replace('\\svwhaefl02\homedrives$\Matt.Wanchap\Documents\WindowsPowerShell\Modules;','')
+$env:PSModulePath =  $env:PSModulePath.Replace('\\svwhaefl02\homedrives$\Matt.Wanchap\Documents\PowerShell\Modules;','')
 
 Import-Module 'C:\tools\poshgit\dahlbyk-posh-git-9bda399\src\posh-git.psd1'
 
