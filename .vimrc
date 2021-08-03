@@ -35,7 +35,7 @@ set smartcase
 set relativenumber
 set number
 set tabstop=4 shiftwidth=4 expandtab
-"set guifont=Cascadia_Code:h10
+set guifont=Cascadia_Code:h10.5
 set enc=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8
@@ -71,12 +71,12 @@ nnoremap <PageDown> <C-d>
 inoremap <Esc> <Esc>`^
 inoremap <c-space> <c-n>
 
-" yank and paste from the clipboard because C-Insert can't be mapped for some idiotic reason
-nnoremap <S-Insert> "+P
-nnoremap <leader>p "+P
-nnoremap <leader>y "+yy
-vnoremap <leader>p "+P
-vnoremap <leader>y "+y
+" neovim-only: yank and paste from the clipboard because C-Insert can't be mapped for some idiotic reason
+" nnoremap <S-Insert> "+P
+" nnoremap <leader>p "+P
+" nnoremap <leader>y "+yy
+" vnoremap <leader>p "+P
+" vnoremap <leader>y "+y
 
 :se autochdir   "auto-set current working directory to current file's directory
 
@@ -86,7 +86,7 @@ set guioptions-=r  "remove right-hand scroll bar
 
 "Most Recently Used
 :command MRU browse oldfiles
-"
+
 "doesn't make much sense - it's the alias for Invoke-Item in Powershell, used like "ii ./", just to keep the name the same
 :command II !start explorer /select,%:p 
 
