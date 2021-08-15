@@ -57,6 +57,8 @@ set autoindent
 set cursorline
 set scrolloff=3
 
+syntax on
+
 " make sure to set leader BEFORE mapping things to it
 nnoremap <SPACE> <Nop>
 let mapleader=" "
