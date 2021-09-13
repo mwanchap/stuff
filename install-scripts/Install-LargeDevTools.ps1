@@ -10,13 +10,20 @@ choco install visualstudio2019professional visualstudio2019-workload-netweb visu
 #vscode stuff
 choco install vscode vscode-csharp vscode-icons vscode-powershell -y
 
-#manual VS config stuff
-    #choco install vsvim -y
-    #install these extensions
-        #relative number
-        #editor guidelines (Paul Harrington's one)
-        #sonarlint
-    #import codemaid settings from CodeMaid.config
+# manual VS config stuff
+    # must-have extensions:
+        # VSVim - choco install vsvim -y
+        # relative number
+        # editor guidelines (Paul Harrington's one)
+        # sonarlint
+        # VSColorOutput
+        # Productivity Power Tools (especially: shrink empty lines, align assignments)
+        # Hide Main Menu, Title Bar, and Tabs
+    # optional extensions:
+        # auto theme switcher for win10 dark mode
+        # AceJump
+    # maybe?
+        # CodeMaid - import codemaid settings from CodeMaid.config
 
 # vscode stuff, have to loop bc it can only install one at a time
 ("formulahendry.code-runner", "ms-python.python", "ms-vscode.PowerShell",
