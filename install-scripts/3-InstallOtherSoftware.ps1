@@ -9,7 +9,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git $env:userprofile\vimfiles\
 vim +PluginInstall +qall;
 
 #other software
-choco install googlechrome.canary nodejs.install sysinternals 7zip.install firefox vlc windirstat azure-cli poshgit sumatrapdf.install irfanview negativescreen sourcetree kdiff3 microsoftazurestorageexplorer rdcman qmmp postman sharex winscp force-cli rescuetime ilspy grepwin paint.net csvfileview cascadiacode sourcecodepro toggl wsudo avidemux fiddler hxd powertoys -y
+choco install nodejs.install sysinternals 7zip.install firefox vlc windirstat poshgit sumatrapdf.install irfanview negativescreen kdiff3 winamp postman sharex ilspy grepwin paint.net csvfileview cascadiacode toggl wsudo avidemux fiddler hxd switcheroo docker-desktop dotnetfx winamp switcheroo docker-desktop dotnetfx microsoft-windows-terminal vscode zoom bitwarden -y
 
 #sharex hotkey
 if (Test-Path "$homedir\ShareX")
