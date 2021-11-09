@@ -11,20 +11,18 @@ Write-Heading "Running tasks..."
 $tasks = @(
     [pscustomobject]@{name="ahk shortcuts"; exec = "~\stuff\Matt's Shortcuts.ahk"},
     [pscustomobject]@{name="easywindowdrag"; exec = "~\stuff\EasyWindowDrag_(KDE).ahk"}
+    [pscustomobject]@{name="mouse jiggler"; exec = "C:\ProgramData\chocolatey\bin\MouseJiggler.exe"; args = "-j -m -z"}
 );
 
 foreach ($task in $tasks)
 {
     write-host "    Starting $($task.name)";
-    . $task.exec
+    Start-Process -FilePath $task.exec -ArgumentList $task.args
 }
 
 #clear scratch dir
 Write-Heading "Clearing scratch dir..."
 Remove-Item ~\scratch\* -Recurse -Force
-
-Write-Heading "Copying spotlight images as wallpapers..."
-& "~\stuff\Scripts\Windows Spotlight Wallpapers.ps1"
 
 #check for outdated packages
 Write-Heading "Checking for outdated packages..."

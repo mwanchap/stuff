@@ -1,9 +1,9 @@
 [user]
 	name = Matt Wanchap
-	email = matt.wanchap@cpal.com.au
+	email = matt.wanchap@class.com.au
 [core]
 	autocrlf = input
-	editor = nvim
+	editor = vim
 [diff]
     tool = kdiff3
 [difftool]
@@ -20,7 +20,7 @@
 [push]
 	default = simple
 [credential]
-	helper = manager
+	helper = manager-core
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

@@ -40,9 +40,9 @@ set enc=utf-8
 set fileencoding=utf-8
 set fileencodings=ucs-bom,utf8
 set textwidth=0
-set shell=powershell\ -noprofile
-set shellcmdflag=-command
-set shellxquote="
+"set shell=powershell\ -noprofile
+"set shellcmdflag=-command
+"set shellxquote="
 set splitbelow
 set splitright
 set diffopt=internal,filler,vertical
