@@ -35,7 +35,7 @@ function ScheduleStartupTask
     Register-ScheduledTask -TaskName $TaskName -InputObject $newTask
 }
 
-ScheduleStartupTask -TaskName "startup tasks" -TaskDescription "Runs startup tasks script" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". '~\stuff\startup tasks.ps1'""" -RunLevel Highest;
+ScheduleStartupTask -TaskName "startup tasks" -TaskDescription "Runs startup tasks script" -ExecPath "pwsh" -ExecArgs "-NoProfile -Command "". '~\stuff\startup tasks.ps1'""" -RunLevel Highest;
 ScheduleStartupTask -TaskName "continue setup - install other things 1" -TaskDescription "runs the next steps in parallel" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". '~\stuff\install-scripts\3-InstallOtherSoftware.ps1'""" -RunLevel Highest;
 ScheduleStartupTask -TaskName "continue setup - install other things 2" -TaskDescription "runs the next steps in parallel" -ExecPath "powershell" -ExecArgs "-NoProfile -Command "". '~\stuff\install-scripts\4-InstallIISFeatures.ps1'""" -RunLevel Highest;
 
