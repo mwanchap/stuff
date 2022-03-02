@@ -46,6 +46,8 @@ set textwidth=0
 set splitbelow
 set splitright
 set diffopt=internal,filler,vertical
+set laststatus=2
+set ruler
 
 nnoremap ? /\v
 vnoremap ? /\v

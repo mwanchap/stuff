@@ -9,8 +9,8 @@ function Write-Heading
 
 Write-Heading "Running tasks..."
 $tasks = @(
-    [pscustomobject]@{name="ahk shortcuts"; exec = "~\stuff\Matt's Shortcuts.ahk"; args = ""},
-    [pscustomobject]@{name="easywindowdrag"; exec = "~\stuff\EasyWindowDrag_(KDE).ahk"; args = ""}
+    [pscustomobject]@{name="ahk shortcuts"; exec = "~\stuff\Matt's Shortcuts.ahk"},
+    [pscustomobject]@{name="easywindowdrag"; exec = "~\stuff\EasyWindowDrag_(KDE).ahk"}
     [pscustomobject]@{name="mouse jiggler"; exec = "C:\ProgramData\chocolatey\bin\MouseJiggler.exe"; args = "-j -m -z"}
 );
 
