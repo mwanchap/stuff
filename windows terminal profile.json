@@ -27,13 +27,23 @@
                 "splitMode": "duplicate"
             },
             "keys": "alt+shift+d"
+        },
+        {
+            "keys": "win+`",
+            "command": {
+                "action": "globalSummon",
+                "dropdownDuration": 350,
+                "toggleVisibility": true,
+                "monitor": "toCurrent",
+                "desktop": "toCurrent"
+            }
         }
     ],
     "alwaysShowTabs": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
-    "initialRows": 60,
+    "initialRows": 70,
     "launchMode": "maximized",
     "profiles": 
     {
@@ -58,11 +68,20 @@
             {
                 "backgroundImage": "C:\\Users\\Matt.Wanchap\\OneDrive - Class\\Pictures\\terminal-bg.jpg",
                 "closeOnExit": "always",
+                "colorScheme": "Matt's colour scheme",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore",
                 "useAcrylic": true
+            },
+            {
+                "colorScheme": "Solarized Dark",
+                "commandline": "csharprepl",
+                "guid": "{bab5f22e-cce5-40e0-b28e-2fe5391e192d}",
+                "hidden": false,
+                "icon": null,
+                "name": "C# REPL"
             },
             {
                 "backgroundImage": "C:/Users/Matt.Wanchap/Pictures/ubuntu-terminal-bg.jpg",
@@ -163,7 +182,7 @@
             "purple": "#A626A4",
             "red": "#E45649",
             "selectionBackground": "#FFFFFF",
-            "white": "#FAFAFA",
+            "white": "#7A7A7A",
             "yellow": "#C18301"
         },
         {
@@ -328,7 +347,8 @@
             "yellow": "#808000"
         }
     ],
-    "startOnUserLogin": false,
+    "startOnUserLogin": true,
+    "theme": "system",
     "useAcrylicInTabRow": true,
     "windowingBehavior": "useExisting"
 }

@@ -9,6 +9,7 @@ AppsKey & 7::Send #{7}
 AppsKey & 8::Send #{8}
 AppsKey & 9::Send #{9}
 AppsKey & 0::Send #{0}
+AppsKey & `::Send #{sc29}
 
 ;old 5-button mouse macros, less useful now, commented out
 ;XButton2 & LButton::SendInput ^c
