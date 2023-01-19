@@ -1,15 +1,15 @@
-AppsKey::Send {AppsKey}
-AppsKey & 1::Send #{1}
-AppsKey & 2::Send #{2}
-AppsKey & 3::Send #{3}
-AppsKey & 4::Send #{4}
-AppsKey & 5::Send #{5}
-AppsKey & 6::Send #{6}
-AppsKey & 7::Send #{7}
-AppsKey & 8::Send #{8}
-AppsKey & 9::Send #{9}
-AppsKey & 0::Send #{0}
-AppsKey & `::Send #{sc29}
+RAlt::Send {RAlt}
+RAlt & 1::Send #{1}
+RAlt & 2::Send #{2}
+RAlt & 3::Send #{3}
+RAlt & 4::Send #{4}
+RAlt & 5::Send #{5}
+RAlt & 6::Send #{6}
+RAlt & 7::Send #{7}
+RAlt & 8::Send #{8}
+RAlt & 9::Send #{9}
+RAlt & 0::Send #{0}
+RAlt & `::Send #{sc29}
 
 ;old 5-button mouse macros, less useful now, commented out
 ;XButton2 & LButton::SendInput ^c
