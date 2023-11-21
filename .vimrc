@@ -100,7 +100,7 @@ set guioptions-=r  "remove right-hand scroll bar
 "plugins stuff
 
 "easymotion
-map f <Plug>(easymotion-s2)
+map <M-;> <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 
 "papercolor
