@@ -9,8 +9,8 @@ function Write-Heading
 
 Write-Heading "Running tasks..."
 $tasks = @(
-    [pscustomobject]@{name="ahk shortcuts"; exec = "~\stuff\Matt's Shortcuts.ahk"},
-    [pscustomobject]@{name="easywindowdrag"; exec = "~\stuff\EasyWindowDrag_(KDE).ahk"}
+    @{name="ahk shortcuts"; exec = "~\stuff\Matt's Shortcuts.ahk"},
+    @{name="easywindowdrag"; exec = "~\stuff\EasyWindowDrag_(KDE).ahk"}
 );
 
 foreach ($task in $tasks)
