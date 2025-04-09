@@ -9,7 +9,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git $env:userprofile\vimfiles\
 vim +PluginInstall +qall;
 
 #other software
-choco install nodejs.install sysinternals 7zip.install firefox vlc windirstat poshgit sumatrapdf.install irfanview negativescreen kdiff3 winamp postman sharex ilspy grepwin paint.net csvfileview cascadiacode toggl wsudo avidemux fiddler hxd switcheroo docker-desktop dotnetfx winamp switcheroo docker-desktop dotnetfx microsoft-windows-terminal vscode zoom bitwarden -y
+choco install nodejs.install sysinternals 7zip.install firefox windirstat poshgit sumatrapdf.install negativescreen kdiff3 postman sharex ilspy grepwin paint.net csvfileview cascadiacode wsudo fiddler hxd switcheroo docker-desktop dotnetfx microsoft-windows-terminal bitwarden -y
 
 #sharex hotkey
 if (Test-Path "$homedir\ShareX")
@@ -19,11 +19,11 @@ if (Test-Path "$homedir\ShareX")
 
 #powershell stuff
 Install-PackageProvider -Name NuGet -Force
-Install-Module "AzureRM","AzureAD","ImportExcel","sqlserver" -Force
+#Install-Module "AzureRM","AzureAD","ImportExcel","sqlserver" -Force
 Update-Help
 
 #python stuff
 choco install python3 -y
 python -m pip install --upgrade pip
-python -m pip install matplotlib scipy numpy openpyxl pandas jupyter
+#python -m pip install matplotlib scipy numpy openpyxl pandas jupyter
 

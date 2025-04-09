@@ -104,7 +104,7 @@ map <M-;> <Plug>(easymotion-s2)
 let g:EasyMotion_smartcase = 1
 
 "papercolor
-set background=light
+set background=dark
 colorscheme PaperColor
 
 set diffexpr=MyDiff()
