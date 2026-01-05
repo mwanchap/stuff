@@ -21,6 +21,7 @@
 	st = status
 	last = log -1 HEAD
 	ll = log --pretty=format:\"%C(yellow)%h%Cred%d\\\\ %Creset%s%Cblue\\\\ [%cn]\" --decorate --numstat
+    wdiff = diff --word-diff=color --word-diff-regex=.
 [push]
 	default = simple
 [credential]
